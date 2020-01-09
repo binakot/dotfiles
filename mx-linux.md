@@ -65,7 +65,7 @@ Configure git:
 $ git config --global -e
 $ git config --global user.name “binakot”
 $ git config --global user.email “binakot@gmail.com”
-$ git config --global core.editor "vim"
+$ git config --global core.editor "nvim"
 ```
 
 #### Zsh + Oh My Zsh
@@ -84,6 +84,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/the
 ```
 
 Set `ZSH_THEME=powerlevel10k/powerlevel10k` in your `~/.zshrc`.
+
+Configure fonts for terminal with patched `Meslo Nerd Font` (copy `ttf` files to `/usr/share/fonts/truetype/meslonerd`): 
+https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k
 
 #### Tmux
 
