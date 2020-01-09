@@ -21,6 +21,8 @@ It is a midweight OS designed to combine an elegant and efficient desktop with s
 
 ## Setup
 
+---
+
 ### Update system
 
 ```bash
@@ -49,18 +51,38 @@ $ sudo apt-get -y install git
 
 Setup SSH keys:
 
-https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
-
 ```bash
 $ ssh-keygen -t rsa -b 4096
 ```
 
+https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+
+https://confluence.atlassian.com/bitbucketserver/ssh-access-keys-for-system-use-776639781.html
+
 Configure git:
 
 ```bash
+$ git config --global -e
 $ git config --global user.name “binakot”
 $ git config --global user.email “binakot@gmail.com”
 $ git config --global core.editor "vim"
+```
+
+#### (Neo)Vim
+
+Install:
+
+```bash
+$ sudo apt-get install neovim
+```
+
+#### Zsh
+
+Install:
+
+```bash
+$ sudo apt-get install zsh
+$ chsh -s $(which zsh)
 ```
 
 ---
@@ -74,4 +96,12 @@ $ git config --global core.editor "vim"
 ```bash
 $ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
 $ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
+```
+
+---
+
+### Misc
+
+```bash
+$ sudo apt-get -y install fonts-firacode
 ```
