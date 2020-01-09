@@ -80,13 +80,41 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/t
 Theme:
 
 ```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
 
-Set `ZSH_THEME=powerlevel10k/powerlevel10k` in your `~/.zshrc`.
+Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in your `~/.zshrc`.
 
 Configure fonts for terminal with patched `Meslo Nerd Font` (copy `ttf` files to `/usr/share/fonts/truetype/meslonerd`): 
 https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k
+
+Plugins:
+
+* [Built-in](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins)
+
+```text
+git tmux vi-mode docker
+```
+
+* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): 
+
+```bash
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# plugins=(zsh-autosuggestions)
+```
+
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting):
+
+```bash
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# plugins=(zsh-syntax-highlighting) # Note that zsh-syntax-highlighting must be the last plugin sourced.
+```
+
+The complete list of plugins:
+
+```
+plugins=(git tmux vi-mode docker zsh-autosuggestions zsh-syntax-highlighting)
+```
 
 #### Tmux
 
@@ -110,12 +138,16 @@ $ sudo apt-get install neovim
 
 * [Google Chrome](https://www.google.com/intl/ru/chrome/)
 
-* [Telegram](https://desktop.telegram.org/)
+* [Slack](https://slack.com/intl/en-ru/downloads/instructions/ubuntu)
+
+* [Telegram](https://desktop.telegram.org/):
 
 ```bash
 $ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
 $ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 ```
+
+* [Docker](https://docs.docker.com/install/linux/docker-ce/debian/)
 
 ---
 
@@ -123,4 +155,5 @@ $ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 
 ```bash
 $ sudo apt-get -y install fonts-firacode
+$ sudo apt-get -y install lintian
 ```
