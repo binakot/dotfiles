@@ -5,7 +5,7 @@
 ```
 MX-19
 OS: Debian 10 buster
-Shell: bash
+Shell: zsh
 DE: XFCE
 WM: Xfwm4
 ```
@@ -68,21 +68,37 @@ $ git config --global user.email “binakot@gmail.com”
 $ git config --global core.editor "vim"
 ```
 
+#### Zsh + Oh My Zsh
+
+Install:
+
+```bash
+$ sudo apt-get install zsh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Theme:
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+```
+
+Set `ZSH_THEME=powerlevel10k/powerlevel10k` in your `~/.zshrc`.
+
+#### Tmux
+
+Install:
+
+```bash
+$ sudo apt-get install tmux
+```
+
 #### (Neo)Vim
 
 Install:
 
 ```bash
 $ sudo apt-get install neovim
-```
-
-#### Zsh
-
-Install:
-
-```bash
-$ sudo apt-get install zsh
-$ chsh -s $(which zsh)
 ```
 
 ---
