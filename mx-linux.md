@@ -24,9 +24,9 @@ It is a midweight OS designed to combine an elegant and efficient desktop with s
 ### Update system
 
 ```bash
-sudo apt-get update && \
-sudo apt-get -y dist-upgrade && \
-sudo apt-get -y autoremove
+$ sudo apt-get update && \
+       apt-get -y dist-upgrade && \
+       apt-get -y autoremove
 ```
 
 ---
@@ -34,17 +34,44 @@ sudo apt-get -y autoremove
 ### Install tools
 
 ```bash
-sudo apt-get -y install \
-     build-essential \
-     curl wget
+$ sudo apt-get -y install \
+    build-essential \
+    curl wget
 ```
 
 #### Git
 
-TODO
+Install:
+
+```bash
+$ sudo apt-get -y install git
+```
+
+Setup SSH keys:
+
+https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+
+```bash
+$ ssh-keygen -t rsa -b 4096
+```
+
+Configure git:
+
+```bash
+$ git config --global user.name “binakot”
+$ git config --global user.email “binakot@gmail.com”
+$ git config --global core.editor "vim"
+```
 
 ---
 
 ### Install software (deb-packages)
 
-* [Google Chomre](https://www.google.com/intl/ru/chrome/)
+* [Google Chrome](https://www.google.com/intl/ru/chrome/)
+
+* [Telegram](https://desktop.telegram.org/)
+
+```bash
+$ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
+$ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
+```
