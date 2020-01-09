@@ -134,7 +134,22 @@ $ sudo apt-get install neovim
 
 ---
 
-### Install software (deb-packages)
+### Install software
+
+* [SDKMAN!](https://dzone.com/articles/sdkman-managing-sdks-were-never-so-smart):
+
+```bash
+$ curl -s "https://get.sdkman.io" | bash
+$ sdk list java             # list of available builds
+$ sdk install java          # install the latest LTS build
+$ sdk current java          # show the Java version for the current terminal
+$ sdk use java $VERSION     # switch the Java version for the current terminal
+$ sdk default java $VERSION # set a specific version as default for all terminals
+```
+
+* [Docker](https://docs.docker.com/install/linux/docker-ce/debian/)
+
+* [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
 
 * [Google Chrome](https://www.google.com/intl/ru/chrome/)
 
@@ -146,8 +161,6 @@ $ sudo apt-get install neovim
 $ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
 $ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
 ```
-
-* [Docker](https://docs.docker.com/install/linux/docker-ce/debian/)
 
 ---
 
