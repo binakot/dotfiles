@@ -41,6 +41,10 @@ It is a midweight OS designed to combine an elegant and efficient desktop with s
 $ sudo apt-get update && \
        apt-get -y dist-upgrade && \
        apt-get -y autoremove
+
+$ sudo apt-get -y install \
+    fonts-firacode fonts-powerline \
+    xclip lintian
 ```
 
 ---
@@ -249,14 +253,4 @@ $ sdk default java $VERSION # set a specific version as default for all terminal
 ```bash
 $ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
 $ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram
-```
-
----
-
-### Misc
-
-```bash
-$ sudo apt-get -y install \
-    fonts-firacode fonts-powerline \
-    xclip lintian
 ```
