@@ -3,18 +3,18 @@
 ## Info
 
 ```
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMM   muratov@muratov-linux-pc 
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMM   binakot@mx-linux
 MMMMMMMMMMNs..yMMMMMMMMMMMMMm: +NMMMMMMM   ------------------------ 
 MMMMMMMMMN+    :mMMMMMMMMMNo` -dMMMMMMMM   OS: MX x86_64 
-MMMMMMMMMMMs.   `oNMMMMMMh- `sNMMMMMMMMM   Kernel: 4.19.0-6-amd64 
-MMMMMMMMMMMMN/    -hMMMN+  :dMMMMMMMMMMM   Shell: zsh 5.7.1 
+MMMMMMMMMMMs.   `oNMMMMMMh- `sNMMMMMMMMM   Kernel: 4.x.x-amd64 
+MMMMMMMMMMMMN/    -hMMMN+  :dMMMMMMMMMMM   Shell: zsh 
 MMMMMMMMMMMMMMh-    +ms. .sMMMMMMMMMMMMM   DE: Xfce 
 MMMMMMMMMMMMMMMN+`   `  +NMMMMMMMMMMMMMM   WM: Xfwm4 
 MMMMMMMMMMMMMMNMMd:    .dMMMMMMMMMMMMMMM   WM Theme: Arc-Dark 
 MMMMMMMMMMMMm/-hMd-     `sNMMMMMMMMMMMMM   Theme: Greybird-mx [GTK2], Adwaita [GTK3] 
 MMMMMMMMMMNo`   -` :h/    -dMMMMMMMMMMMM   Icons: Papirus [GTK2], Adwaita [GTK3]  
 MMMMMMMMMd:       /NMMh-   `+NMMMMMMMMMM   Terminal: xfce4-terminal  
-MMMMMMMNo`         :mMMN+`   `-hMMMMMMMM   Terminal Font: MesloLGS NF 11  
+MMMMMMMNo`         :mMMN+`   `-hMMMMMMMM   Terminal Font: MesloLGS NF 11 
 MMMMMMh.            `oNMMd:    `/mMMMMMM   
 MMMMm/                -hMd-      `sNMMMM   
 MMNs`                   -          :dMMM   
@@ -25,9 +25,9 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MX Linux is a cooperative venture between the antiX and former MEPIS communities,using the best tools and talents from each distro. 
 It is a midweight OS designed to combine an elegant and efficient desktop with simple configuration, high stability, solid performance and medium-sized footprint.
 
-[Homepage](https://mxlinux.org)
+[MX Linux - Homepage](https://mxlinux.org)
 
-[Wiki](https://en.wikipedia.org/wiki/MX_Linux)
+[MX Linux - Wikipedia](https://en.wikipedia.org/wiki/MX_Linux)
 
 ---
 
@@ -41,10 +41,6 @@ It is a midweight OS designed to combine an elegant and efficient desktop with s
 $ sudo apt-get update && \
        apt-get -y dist-upgrade && \
        apt-get -y autoremove
-
-$ sudo apt-get -y install \
-    fonts-firacode fonts-powerline \
-    xclip lintian
 ```
 
 ---
@@ -54,7 +50,9 @@ $ sudo apt-get -y install \
 ```bash
 $ sudo apt-get -y install \
     build-essential \
-    curl wget
+    curl wget \
+    xclip lintian \
+    fonts-firacode fonts-powerline
 ```
 
 #### Git
@@ -84,7 +82,7 @@ $ git config --global user.email binakot@gmail.com
 $ git config --global core.editor nvim
 ```
 
-#### Zsh + Oh My Zsh
+#### Zsh
 
 Install:
 
@@ -101,16 +99,13 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 
 Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in your `~/.zshrc`.
 
-Configure fonts for terminal with patched `Meslo Nerd Font` (copy `ttf` files to `/usr/share/fonts/truetype/meslonerd`): 
-https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k
+Configure fonts for terminal with patched 
+[Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k). 
+Copy all `ttf` files to `/usr/share/fonts/truetype/meslonerd`.
 
 Plugins:
 
-* [Built-in](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins)
-
-```text
-git tmux vi-mode docker
-```
+* [Built-in](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins): `git tmux vi-mode docker`
 
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): 
 
@@ -205,7 +200,7 @@ run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
 Reload config `$ tmux source ~/.tmux.conf`
-and install the plugins in tmux press `Ctrl+A -> I`.
+and install the plugins in tmux with `Ctrl+A -> I`.
 Later for plugins updates use `Ctrl+A -> U`.
 
 And start to use:
@@ -224,6 +219,10 @@ Install:
 ```bash
 $ sudo apt-get install neovim
 ```
+
+Configure: 
+
+**TODO**
 
 ---
 
