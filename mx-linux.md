@@ -125,49 +125,62 @@ $ git config --global -e
 
 Initial `.gitignore_global` you can take from [here](https://gist.github.com/octocat/9257657)
 
-#### Zsh
+#### Zsh + Oh My Zsh + FZF
 
 Install:
 
 ```bash
 $ sudo apt-get install zsh
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+$ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ```
 
 Theme:
 
+Download some of `Nerd Fonts` from site: https://www.nerdfonts.com. For example the patched 
+[Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k). 
+Copy `ttf` files in system font folder `/usr/share/fonts/truetype/`.
+
+Configure fonts and colors for `xcfe-terminal`. For example with [Solirezed](https://ethanschoonover.com/solarized/):
+https://github.com/sgerrand/xfce4-terminal-colors-solarized.
+
 ```bash
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+$ git clone --depth 1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
 
 Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in your `~/.zshrc`.
 
-Configure fonts for terminal with patched 
-[Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k). 
-Copy all `ttf` files to `/usr/share/fonts/truetype/meslonerd`.
-
 Plugins:
 
-* [Built-in](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins): `git tmux vi-mode docker`
+* [Built-in](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins)
 
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): 
 
 ```bash
-$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$ git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # plugins=(zsh-autosuggestions)
 ```
 
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting):
 
 ```bash
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+$ git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # plugins=(zsh-syntax-highlighting) # Note that zsh-syntax-highlighting must be the last plugin sourced.
 ```
 
 The complete list of plugins:
 
 ```
-plugins=(git tmux vi-mode docker zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    git
+    fzf
+    tmux
+    vi-mode
+    bgnotify
+    docker
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 ```
 
 #### Tmux
