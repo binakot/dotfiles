@@ -199,6 +199,9 @@ List of aliases in `~/.zshrc`:
 alias vi="nvim"
 alias tmux="tmux -2"
 alias pcat="pygmentize -f terminal256 -O style=native -g"
+alias pls="colorls -a --sd --gs"
+alias plsa="colorls -la --sd --gs"
+alias ptree="colorls --tree --sd --gs"
 ```
 
 #### Tmux
@@ -279,15 +282,6 @@ Reload config `$ tmux source ~/.tmux.conf`
 and install the plugins in tmux with `Ctrl+A -> I`.
 Later for plugins updates use `Ctrl+A -> U`.
 
-And start to use:
-
-```bash
-$ tmux new -s dev # create session
-$ tmux ls # list of sessions
-$ tmux attach -t dev # attach to session
-$ tmux detach # detach from session 
-```
-
 Configure `zsh` plugin for `tmux` adding to file `~/.zshrc`:
 
 ```bash
@@ -295,6 +289,15 @@ export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_AUTOSTART_ONCE=true
 export ZSH_TMUX_AUTOCONNECT=true
 export ZSH_TMUX_AUTOQUIT=false
+```
+
+And start to use:
+
+```bash
+$ tmux new -s dev # create session
+$ tmux ls # list of sessions
+$ tmux attach -t dev # attach to session
+$ tmux detach # detach from session 
 ```
 
 #### (Neo)Vim
@@ -308,6 +311,16 @@ $ sudo apt-get install neovim
 Configure: 
 
 **TODO**
+
+#### Others
+
+Install [Color LS](https://github.com/athityakumar/colorls):
+
+```bash
+$ sudo apt-get install ruby-full
+$ sudo gem install colorls
+$ source $(dirname $(gem which colorls))/tab_complete.sh
+```
 
 ---
 
