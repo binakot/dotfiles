@@ -118,7 +118,7 @@ $ git config --global -e
     lineNumber = true
 
 [alias]
-    config = config --list
+    configs = config --list
     aliases = config --get-regexp alias
     tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
 ```
