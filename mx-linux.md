@@ -3,23 +3,23 @@
 ## Info
 
 ```
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMM   binakot@mx-linux
-MMMMMMMMMMNs..yMMMMMMMMMMMMMm: +NMMMMMMM   ------------------------ 
-MMMMMMMMMN+    :mMMMMMMMMMNo` -dMMMMMMMM   OS: MX x86_64 
-MMMMMMMMMMMs.   `oNMMMMMMh- `sNMMMMMMMMM   Kernel: 4.x.x-amd64 
-MMMMMMMMMMMMN/    -hMMMN+  :dMMMMMMMMMMM   Shell: zsh 
-MMMMMMMMMMMMMMh-    +ms. .sMMMMMMMMMMMMM   DE: Xfce 
-MMMMMMMMMMMMMMMN+`   `  +NMMMMMMMMMMMMMM   WM: Xfwm4 
-MMMMMMMMMMMMMMNMMd:    .dMMMMMMMMMMMMMMM   WM Theme: Arc-Dark 
-MMMMMMMMMMMMm/-hMd-     `sNMMMMMMMMMMMMM   Theme: Greybird-mx [GTK2], Adwaita [GTK3] 
-MMMMMMMMMMNo`   -` :h/    -dMMMMMMMMMMMM   Icons: Papirus [GTK2], Adwaita [GTK3]  
-MMMMMMMMMd:       /NMMh-   `+NMMMMMMMMMM   Terminal: xfce4-terminal  
-MMMMMMMNo`         :mMMN+`   `-hMMMMMMMM   Terminal Font: MesloLGS NF 11 
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMM   muratov@muratov-linux-pc
+MMMMMMMMMMNs..yMMMMMMMMMMMMMm: +NMMMMMMM   ------------------------
+MMMMMMMMMN+    :mMMMMMMMMMNo` -dMMMMMMMM   OS: MX x86_64
+MMMMMMMMMMMs.   `oNMMMMMMh- `sNMMMMMMMMM   Kernel: 4.x-amd64
+MMMMMMMMMMMMN/    -hMMMN+  :dMMMMMMMMMMM   Shell: zsh
+MMMMMMMMMMMMMMh-    +ms. .sMMMMMMMMMMMMM   DE: Xfce
+MMMMMMMMMMMMMMMN+`   `  +NMMMMMMMMMMMMMM   WM: Xfwm4
+MMMMMMMMMMMMMMNMMd:    .dMMMMMMMMMMMMMMM   WM Theme: Matcha-dark-azul
+MMMMMMMMMMMMm/-hMd-     `sNMMMMMMMMMMMMM   Theme: Matcha-dark-azul [GTK2], Adwaita [GTK3]
+MMMMMMMMMMNo`   -` :h/    -dMMMMMMMMMMMM   Icons: Papirus-Dark [GTK2], Adwaita [GTK3]
+MMMMMMMMMd:       /NMMh-   `+NMMMMMMMMMM   
+MMMMMMMNo`         :mMMN+`   `-hMMMMMMMM   
 MMMMMMh.            `oNMMd:    `/mMMMMMM   
 MMMMm/                -hMd-      `sNMMMM   
 MMNs`                   -          :dMMM   
-Mm:                                 `oMM    
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    
+Mm:                                 `oMM   
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 ```
 
 MX Linux is a cooperative venture between the antiX and former MEPIS communities,using the best tools and talents from each distro. 
@@ -50,9 +50,9 @@ $ sudo apt-get update && \
 ```bash
 $ sudo apt-get -y install \
     build-essential \
-    curl wget \
-    xclip lintian \
-    fonts-firacode fonts-powerline
+    curl wget xclip \
+    fonts-firacode fonts-powerline \
+    lintian
 ```
 
 #### Git
@@ -66,21 +66,64 @@ $ sudo apt-get -y install git
 Setup SSH keys:
 
 ```bash
-$ ssh-keygen -t rsa -b 4096
+$ ssh-keygen -t rsa -b 4096 -C "binakot@github.com" # fileName: binakot.github.id_rsa
+$ ssh-keygen -t rsa -b 4096 -C "binakot@bitbucket.org" # fileName: binakot.bitbucket.id_rsa
+$ ssh-add -k binakot.github.id_rsa binakot.bitbucket.id_rsa
+$ ssh-add -l
 ```
-
-https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
-
-https://confluence.atlassian.com/bitbucketserver/ssh-access-keys-for-system-use-776639781.html
 
 Configure git:
 
 ```bash
 $ git config --global -e
-$ git config --global user.name binakot
-$ git config --global user.email binakot@gmail.com
-$ git config --global core.editor nvim
 ```
+
+```text
+# https://git-scm.com/docs/git-config
+
+[user]
+    name = Ivan Muratov
+    email = binakot@gmail.com
+
+[github]
+    user = binakot
+
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore_global
+    fileMode = false
+    quotepath = false
+
+[credential]
+    helper = cache
+
+[fetch]
+    prune = true
+    pruneTags = true
+
+[push]
+    default = simple
+    followTags = true
+
+[rebase]
+    autoStash = true
+
+[merge]
+    log = true
+
+[color]
+    ui = true
+
+[grep]
+    lineNumber = true
+
+[alias]
+    config = config --list
+    aliases = config --get-regexp alias
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+```
+
+Initial `.gitignore_global` you can take from [here](https://gist.github.com/octocat/9257657)
 
 #### Zsh
 
