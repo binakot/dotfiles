@@ -49,10 +49,10 @@ $ sudo apt-get update && \
 
 ```bash
 $ sudo apt-get -y install \
-    build-essential \
+    build-essential lintian \
     curl wget xclip \
     fonts-firacode fonts-powerline \
-    lintian
+    python3-pygments
 ```
 
 #### Git
@@ -141,7 +141,7 @@ Download some of `Nerd Fonts` from site: https://www.nerdfonts.com. For example 
 [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k). 
 Copy `ttf` files in system font folder `/usr/share/fonts/truetype/`.
 
-Configure fonts and colors for `xcfe-terminal`. For example with [Solirezed](https://ethanschoonover.com/solarized/):
+Configure fonts and colors for `xcfe-terminal`. For example with [Solarized](https://ethanschoonover.com/solarized/):
 https://github.com/sgerrand/xfce4-terminal-colors-solarized.
 
 ```bash
@@ -153,6 +153,13 @@ Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in your `~/.zshrc`.
 Plugins:
 
 * [Built-in](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins)
+
+* [zsh-completions](https://github.com/zsh-users/zsh-completions):
+
+```bash
+git clone --depth 1 https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+# plugins=(zsh-completions)
+```
 
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): 
 
@@ -176,11 +183,22 @@ plugins=(
     fzf
     tmux
     vi-mode
+    colorize
+    colored-man-pages
     bgnotify
     docker
+    zsh-completions
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+```
+
+List of aliases in `~/.zshrc`:
+
+```bash
+alias vi="nvim"
+alias tmux="tmux -2"
+alias pcat="pygmentize -f terminal256 -O style=native -g"
 ```
 
 #### Tmux
@@ -200,6 +218,8 @@ $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Configure the file `~/.tmux.conf`:
 
 ```bash
+set -g default-terminal "xterm-256color"
+
 # Remap prefix from 'Ctrl-b' to 'Ctrl-a'
 unbind C-b
 set -g prefix C-a
@@ -266,6 +286,15 @@ $ tmux new -s dev # create session
 $ tmux ls # list of sessions
 $ tmux attach -t dev # attach to session
 $ tmux detach # detach from session 
+```
+
+Configure `zsh` plugin for `tmux` adding to file `~/.zshrc`:
+
+```bash
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART_ONCE=true
+export ZSH_TMUX_AUTOCONNECT=true
+export ZSH_TMUX_AUTOQUIT=false
 ```
 
 #### (Neo)Vim
