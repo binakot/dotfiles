@@ -1,4 +1,4 @@
-# MX Linux (based on Debian stable)
+# MX Linux (Debian based)
 
 ## Info
 
@@ -215,12 +215,13 @@ $ sudo apt-get install tmux
 Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm):
 
 ```bash
-$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+$ git clone --depth 1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 Configure the file `~/.tmux.conf`:
 
 ```bash
+# Set default terminal
 set -g default-terminal "xterm-256color"
 
 # Remap prefix from 'Ctrl-b' to 'Ctrl-a'
@@ -279,7 +280,7 @@ run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
 Reload config `$ tmux source ~/.tmux.conf`
-and install the plugins in tmux with `Ctrl+A -> I`.
+and install the plugins in `tmux` with `Ctrl+A -> I`.
 Later for plugins updates use `Ctrl+A -> U`.
 
 Configure `zsh` plugin for `tmux` adding to file `~/.zshrc`:
@@ -294,10 +295,7 @@ export ZSH_TMUX_AUTOQUIT=false
 And start to use:
 
 ```bash
-$ tmux new -s dev # create session
-$ tmux ls # list of sessions
-$ tmux attach -t dev # attach to session
-$ tmux detach # detach from session 
+$ source ~/.zshrc
 ```
 
 #### (Neo)Vim
