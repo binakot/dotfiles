@@ -181,6 +181,7 @@ The complete list of plugins:
 plugins=(
     git
     fzf
+    z
     tmux
     vi-mode
     colorize
