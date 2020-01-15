@@ -320,6 +320,23 @@ $ sudo gem install colorls
 $ source $(dirname $(gem which colorls))/tab_complete.sh
 ```
 
+Install [Ranger](https://ranger.github.io);
+
+```bash
+$ sudo apt-get install ranger w3m w3m-img
+$ ranger --copy-config=all
+```
+
+And change few settings in `~/.config/ranger/rc.conf`:
+
+```bash
+set preview_images true
+set preview_images_method w3m
+set w3m_delay 0.1
+set colorscheme solarized
+set draw_borders true
+```
+
 ---
 
 ### Install software
