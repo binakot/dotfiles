@@ -50,9 +50,9 @@ $ sudo apt-get update && \
 ```bash
 $ sudo apt-get -y install \
     build-essential lintian \
-    curl wget xclip \
+    curl wget xclip dos2unix \
     fonts-firacode fonts-powerline \
-    python3-pygments
+    python3-pip python3-setuptools python3-pygments
 ```
 
 #### Git
@@ -197,7 +197,7 @@ plugins=(
 List of aliases in `~/.zshrc`:
 
 ```bash
-alias vi="nvim"
+alias v="nvim"
 alias tmux="tmux -2"
 alias pcat="pygmentize -f terminal256 -O style=native -g"
 alias pls="colorls -a --sd --gs"
@@ -307,9 +307,21 @@ Install:
 $ sudo apt-get install neovim
 ```
 
-Configure: 
+Install plugin manager [vim-plug](https://github.com/junegunn/vim-plug):
 
-**TODO**
+```bash
+$ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ touch ~/.config/nvim/init.vim
+```
+
+Content of `init.vim` file: 
+
+```bash
+call plug#begin()
+Plug 'tpope/vim-sensible'
+call plug#end()
+```
 
 #### Others
 
