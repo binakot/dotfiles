@@ -320,7 +320,7 @@ $ sudo gem install colorls
 $ source $(dirname $(gem which colorls))/tab_complete.sh
 ```
 
-Install [Ranger](https://ranger.github.io);
+Install [Ranger](https://ranger.github.io):
 
 ```bash
 $ sudo apt-get install ranger w3m w3m-img
