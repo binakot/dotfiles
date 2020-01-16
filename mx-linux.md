@@ -3,7 +3,7 @@
 ## Info
 
 ```
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMM   muratov@muratov-linux-pc
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMM   binakot@mx-linux
 MMMMMMMMMMNs..yMMMMMMMMMMMMMm: +NMMMMMMM   ------------------------
 MMMMMMMMMN+    :mMMMMMMMMMNo` -dMMMMMMMM   OS: MX x86_64
 MMMMMMMMMMMs.   `oNMMMMMMh- `sNMMMMMMMMM   Kernel: 4.x-amd64
@@ -52,7 +52,7 @@ $ sudo apt-get -y install \
     build-essential lintian \
     curl wget xclip ack silversearcher-ag dos2unix \
     fonts-firacode fonts-powerline \
-    python3-pip python3-setuptools python3-pygments
+    python-pip python3-pip python-setuptools python3-setuptools python3-pygments
 ```
 
 #### Git
