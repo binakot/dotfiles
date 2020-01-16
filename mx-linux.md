@@ -38,9 +38,9 @@ It is a midweight OS designed to combine an elegant and efficient desktop with s
 ### Update system
 
 ```bash
-$ sudo apt-get update && \
-       apt-get -y dist-upgrade && \
-       apt-get -y autoremove
+$ sudo apt-get update
+$ sudo apt-get dist-upgrade
+$ sudo apt-get autoremove
 ```
 
 ---
@@ -66,9 +66,9 @@ $ sudo apt-get -y install git
 Setup SSH keys:
 
 ```bash
-$ ssh-keygen -t rsa -b 4096                                    # fileName: id_rsa
-$ ssh-keygen -t rsa -b 4096 -C "binakot@github.com"            # fileName: binakot.github.id_rsa
-$ ssh-keygen -t rsa -b 4096 -C "binakot@bitbucket.org"         # fileName: binakot.bitbucket.id_rsa
+$ ssh-keygen -t rsa -b 4096                             # fileName: id_rsa
+$ ssh-keygen -t rsa -b 4096 -C "binakot@github.com"     # fileName: binakot.github.id_rsa
+$ ssh-keygen -t rsa -b 4096 -C "binakot@bitbucket.org"  # fileName: binakot.bitbucket.id_rsa
 $ ssh-add -k id_rsa binakot.github.id_rsa binakot.bitbucket.id_rsa
 $ ssh-add -l
 ```
@@ -323,6 +323,8 @@ Install:
 
 ```bash
 $ sudo apt-get install neovim
+$ pip install pynvim
+$ pip3 install pynvim
 ```
 
 Install plugin manager [vim-plug](https://github.com/junegunn/vim-plug):
@@ -421,6 +423,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+
 " gruvbox
 colorscheme gruvbox
 
@@ -445,9 +448,9 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 Now update config and install all plugins in `nvim`:
 
-```bash
-$ source %
-$ :PlugInstall
+```vim
+:source %
+:PlugInstall
 ```
 
 Replace `Caps Lock` with `Control`. Create and edit file `~/.xmodmap` with content:
