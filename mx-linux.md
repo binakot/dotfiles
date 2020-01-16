@@ -50,7 +50,7 @@ $ sudo apt-get update && \
 ```bash
 $ sudo apt-get -y install \
     build-essential lintian \
-    curl wget xclip dos2unix \
+    curl wget xclip ack silversearcher-ag dos2unix \
     fonts-firacode fonts-powerline \
     python3-pip python3-setuptools python3-pygments
 ```
@@ -66,9 +66,10 @@ $ sudo apt-get -y install git
 Setup SSH keys:
 
 ```bash
-$ ssh-keygen -t rsa -b 4096 -C "binakot@github.com" # fileName: binakot.github.id_rsa
-$ ssh-keygen -t rsa -b 4096 -C "binakot@bitbucket.org" # fileName: binakot.bitbucket.id_rsa
-$ ssh-add -k binakot.github.id_rsa binakot.bitbucket.id_rsa
+$ ssh-keygen -t rsa -b 4096                                    # fileName: id_rsa
+$ ssh-keygen -t rsa -b 4096 -C "binakot@github.com"            # fileName: binakot.github.id_rsa
+$ ssh-keygen -t rsa -b 4096 -C "binakot@bitbucket.org"         # fileName: binakot.bitbucket.id_rsa
+$ ssh-add -k id_rsa binakot.github.id_rsa binakot.bitbucket.id_rsa
 $ ssh-add -l
 ```
 
@@ -124,6 +125,23 @@ $ git config --global -e
 ```
 
 Initial `.gitignore_global` you can take from [here](https://gist.github.com/octocat/9257657)
+
+Also create common `editorconfig` settings in file `~/.editorconfig`:
+
+```text
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+```
 
 #### Zsh + Oh My Zsh + FZF
 
@@ -318,10 +336,129 @@ $ touch ~/.config/nvim/init.vim
 Content of `init.vim` file: 
 
 ```bash
+scriptencoding utf-8
+
 call plug#begin()
+
+" Common
 Plug 'tpope/vim-sensible'
+
+" UI
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Edit
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'editorconfig/editorconfig-vim'
+
+" Search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Code
+Plug 'scrooloose/syntastic'
+Plug 'valloric/youcompleteme'
+Plug 'sheerun/vim-polyglot'
+Plug 'janko-m/vim-test'
+
 call plug#end()
+
+
+set nocompatible
+set noswapfile
+set autowrite
+set clipboard+=unnamedplus
+
+syntax enable
+set relativenumber
+set signcolumn=yes
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+set autoindent
+set cindent
+set shiftround
+
+set ignorecase
+set smartcase
+
+
+" Leader key
+let g:mapleader=','
+" Fast saving of a buffer (<leader>w)
+nmap <leader>w :w!<cr>
+" Map <Space> to / (search) and <Ctrl>+<Space> to ? (backwards search)
+map <space> /
+map <C-space> ?
+" Disable highlights when you press <leader><cr>
+map <silent> <leader><cr> :noh<cr>
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" Disable arrows
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+" gruvbox
+colorscheme gruvbox
+
+" vim-airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='gruvbox'
+
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
+
+" fzf
+map <leader>f :Files<CR>
+
+" ack
+map <leader>g :Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 ```
+
+Now update config and install all plugins in `nvim`:
+
+```bash
+$ source %
+$ :PlugInstall
+```
+
+Replace `Caps Lock` with `Control`. Create and edit file `~/.xmodmap` with content:
+
+```bash
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
+```
+
+After apply settings `$ xmodmap ~/.xmodmap`.
 
 #### Others
 
