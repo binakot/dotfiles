@@ -335,7 +335,7 @@ $ touch ~/.config/nvim/init.vim
 
 Content of `init.vim` file: 
 
-```bash
+```vim
 scriptencoding utf-8
 
 call plug#begin()
