@@ -392,7 +392,10 @@ call plug#end()
 
 set nocompatible
 set noswapfile
+
+set autoread
 set autowrite
+set autowriteall
 set clipboard+=unnamedplus
 
 syntax enable
