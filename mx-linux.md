@@ -49,10 +49,10 @@ $ sudo apt-get autoremove
 
 ```bash
 $ sudo apt-get -y install \
-    build-essential lintian \
+    build-essential cmake lintian \
     curl wget xclip ack silversearcher-ag dos2unix \
     fonts-firacode fonts-powerline \
-    python-pip python3-pip python-setuptools python3-setuptools python3-pygments
+    python-dev python3-dev python-pip python3-pip python-setuptools python3-setuptools python3-pygments
 ```
 
 #### Git
@@ -444,6 +444,13 @@ map <leader>f :Files<CR>
 " ack
 map <leader>g :Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+```
+
+Additional steps for some plugins:
+
+```bash
+cd ~/.config/nvim/plugged/youcompleteme
+python3 install.py --all 
 ```
 
 Now update config and install all plugins in `nvim`:
