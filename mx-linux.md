@@ -396,8 +396,13 @@ set autowrite
 set clipboard+=unnamedplus
 
 syntax enable
-set relativenumber
 set signcolumn=yes
+
+set number
+set relativenumber
+
+set nowrap
+set formatoptions-=t
 
 set tabstop=4
 set softtabstop=4
