@@ -455,18 +455,18 @@ map <leader>g :Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 ```
 
-Additional steps for some plugins:
-
-```bash
-cd ~/.config/nvim/plugged/youcompleteme
-python3 install.py --all 
-```
-
 Now update config and install all plugins in `nvim`:
 
 ```vim
 :source %
 :PlugInstall
+```
+
+Additional steps for some plugins:
+
+```bash
+cd ~/.config/nvim/plugged/youcompleteme
+python3 install.py --all 
 ```
 
 Replace `Caps Lock` with `Control`. Create and edit file `~/.xmodmap` with content:
