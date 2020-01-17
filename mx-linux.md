@@ -51,9 +51,15 @@ $ sudo apt-get autoremove
 $ sudo apt-get -y install \
     build-essential cmake lintian \
     curl wget xclip ack silversearcher-ag dos2unix \
-    fonts-firacode fonts-powerline \
+    fonts-firacode fonts-powerline ttf-ubuntu-font-family \
     python-dev python3-dev python-pip python3-pip python-setuptools python3-setuptools python3-pygments
 ```
+
+Required patched [Nerd Fonts](https://www.nerdfonts.com/).
+
+System fonts: `Ubuntu 11`
+
+Terminal fonts: `Meslo 10`
 
 #### Git
 
