@@ -250,8 +250,8 @@ List of aliases in `~/.zshrc`:
 alias v="nvim"
 alias tmux="tmux -2"
 alias pcat="pygmentize -f terminal256 -O style=native -g"
-alias pls="colorls -a --sd --gs"
-alias plsa="colorls -la --sd --gs"
+alias pls="colorls -A --sd --gs"
+alias plsa="colorls -lA --sd --gs"
 alias ptree="colorls --tree --sd --gs"
 ```
 
