@@ -49,6 +49,7 @@ $ sudo apt-get autoremove
 
 ```bash
 $ sudo apt-get -y install \
+    ufw fail2ban openssh-server openssh-client \
     build-essential cmake lintian \
     curl wget xclip ack silversearcher-ag dos2unix \
     fonts-firacode fonts-powerline ttf-ubuntu-font-family \
@@ -60,6 +61,28 @@ Required patched [Nerd Fonts](https://www.nerdfonts.com/).
 System fonts: `Ubuntu 11`
 
 Terminal fonts: `Meslo 10`
+
+#### Ssh
+
+Configure `fail2ban` to prevent brute-force attacks: `$ sudo vi /etc/fail2ban/jail.local`:
+
+```bash
+[ssh]
+findtime = 3600
+maxretry = 3
+bantime = -1
+```
+
+After restart the service: `$ sudo service fail2ban restart`.
+
+Add next lines to the end of `/etc/ssh/ssh_config`:
+
+```bash
+PermitRootLogin no
+AllowUsers binakot
+```
+
+After restart the service: `$ sudo service ssh restart` and open ports: `$ sudo ufw allow ssh`.
 
 #### Git
 
