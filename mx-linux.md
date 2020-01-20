@@ -102,6 +102,18 @@ $ ssh-add -k id_rsa binakot.github.id_rsa binakot.bitbucket.id_rsa
 $ ssh-add -l
 ```
 
+Create and configure `~/.ssh/config`:
+
+```bash
+Host github.com
+    User binakot
+    IdentityFile ~/.ssh/binakot.github.id_rsa.pub
+
+Host bitbucket.org
+    User binakot
+    IdentityFile ~/.ssh/binakot.bitbucket.id_rsa.pub
+```
+
 Configure git:
 
 ```bash
