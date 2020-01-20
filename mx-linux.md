@@ -75,7 +75,7 @@ bantime = -1
 
 After restart the service: `$ sudo service fail2ban restart`.
 
-Add next lines to the end of `/etc/ssh/ssh_config`:
+Add next lines to the end of `/etc/ssh/sshd_config`:
 
 ```bash
 PermitRootLogin no
