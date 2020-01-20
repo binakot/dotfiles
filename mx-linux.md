@@ -62,7 +62,7 @@ System fonts: `Ubuntu 11`
 
 Terminal fonts: `Meslo 10`
 
-#### Ssh
+#### ✅ Ssh
 
 Configure `fail2ban` to prevent brute-force attacks: `$ sudo vi /etc/fail2ban/jail.local`:
 
@@ -84,7 +84,7 @@ AllowUsers binakot
 
 After restart the service: `$ sudo service ssh restart` and open ports: `$ sudo ufw allow ssh`.
 
-#### Git
+#### ✅ Git
 
 Install:
 
@@ -175,7 +175,7 @@ trim_trailing_whitespace = false
 indent_size = 2
 ```
 
-#### Zsh + Oh My Zsh + FZF
+#### ✅ Zsh + Oh My Zsh + FZF
 
 Install:
 
@@ -255,7 +255,7 @@ alias plsa="colorls -la --sd --gs"
 alias ptree="colorls --tree --sd --gs"
 ```
 
-#### Tmux
+#### ✅ Tmux
 
 Install [Tmux](https://github.com/tmux/tmux):
 
@@ -349,7 +349,7 @@ And start to use:
 $ source ~/.zshrc
 ```
 
-#### (Neo)Vim
+#### ✅ (Neo)Vim
 
 Install:
 
@@ -510,7 +510,7 @@ add Control = Control_L
 
 After apply settings `$ xmodmap ~/.xmodmap`.
 
-#### Others
+#### ✅ Others
 
 Install [Color LS](https://github.com/athityakumar/colorls):
 
