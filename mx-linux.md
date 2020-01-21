@@ -513,7 +513,11 @@ keysym Caps_Lock = Control_L
 add Control = Control_L
 ```
 
-After apply settings `$ xmodmap ~/.xmodmap`.
+After apply settings `$ xmodmap ~/.xmodmap` and put config to `~/.xinitrc`:
+
+```bash
+xmodmap ~/.xmodmap
+```
 
 #### ✅ Others
 
