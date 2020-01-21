@@ -302,6 +302,7 @@ setw -g pane-base-index 1
 # Config windows behaviour
 set -g renumber-windows on
 setw -g automatic-rename on
+setw -g aggressive-resize on
 
 # Activities
 set -g monitor-activity on
