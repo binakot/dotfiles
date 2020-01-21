@@ -559,6 +559,13 @@ $ sdk use java $VERSION     # switch the Java version for the current terminal
 $ sdk default java $VERSION # set a specific version as default for all terminals
 ```
 
+* [NVM](https://github.com/nvm-sh/nvm) for NodeJS:
+
+```bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+$ nvm install node
+```
+
 * [Docker](https://docs.docker.com/install/linux/docker-ce/debian/)
 
 * [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/) for Intellij IDEA and so on
