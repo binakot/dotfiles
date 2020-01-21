@@ -277,17 +277,15 @@ $ git clone --depth 1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Configure the file `~/.tmux.conf`:
 
 ```bash
-# Set default terminal
-set -g default-terminal "tmux-256color"
-
 # Remap prefix from 'Ctrl-b' to 'Ctrl-a'
 unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 bind-key C-a last-window
 
-# Enable mouse support
+# Enable mouse support and focus handling
 set -g mouse on
+set -g focus-events on
 
 # Enable vi mode
 set -g status-keys vi
@@ -330,6 +328,8 @@ set -g @themepack 'powerline/default/cyan'
 
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+
+set -g default-terminal "xterm-256color"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
@@ -381,6 +381,7 @@ call plug#begin()
 
 " Common
 Plug 'tpope/vim-sensible'
+Plug 'sjl/vitality.vim'
 
 " UI
 Plug 'morhetz/gruvbox'
@@ -417,18 +418,16 @@ Plug 'janko-m/vim-test'
 
 call plug#end()
 
-
-set nocompatible
-set noswapfile
+set updatetime=100
 
 set autoread
 set autowrite
 set autowriteall
+set noswapfile
 set clipboard+=unnamedplus
 
 syntax enable
 set signcolumn=yes
-
 set number
 set relativenumber
 
@@ -450,11 +449,6 @@ set smartcase
 
 " Leader key
 let g:mapleader=','
-" Fast saving of a buffer (<leader>w)
-nmap <leader>w :w!<cr>
-" Map <Space> to / (search) and <Ctrl>+<Space> to ? (backwards search)
-map <space> /
-map <C-space> ?
 " Disable highlights when you press <leader><cr>
 map <silent> <leader><cr> :noh<cr>
 " Smart way to move between windows
@@ -462,12 +456,17 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+" Tab switches
+map <A-h> :bp<cr>
+map <A-l> :bn<cr>
 " Disable arrows
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" vitality
+autocmd FocusLost,BufLeave * :wa
 
 " gruvbox
 colorscheme gruvbox
@@ -480,8 +479,8 @@ let g:airline_theme='gruvbox'
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
-vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
+vmap ++ <plug>NERDCommenterToggle
 
 " fzf
 map <leader>f :Files<CR>
@@ -489,6 +488,19 @@ map <leader>f :Files<CR>
 " ack
 map <leader>g :Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" ycm
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>d :YcmCompleter GoToDeclaration<CR>
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 ```
 
 Now update config and install all plugins in `nvim`:
