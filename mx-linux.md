@@ -241,18 +241,11 @@ The complete list of plugins:
 
 ```
 plugins=(
-    git
-    fzf
-    z
-    tmux
-    vi-mode
-    colorize
-    colored-man-pages
+    git tmux vi-mode fzf z
+    colorize colored-man-pages
     bgnotify
     docker
-    zsh-completions
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+    zsh-completions zsh-autosuggestions zsh-syntax-highlighting
 )
 ```
 
@@ -285,7 +278,7 @@ Configure the file `~/.tmux.conf`:
 
 ```bash
 # Set default terminal
-set -g default-terminal "xterm-256color"
+set -g default-terminal "tmux-256color"
 
 # Remap prefix from 'Ctrl-b' to 'Ctrl-a'
 unbind C-b
