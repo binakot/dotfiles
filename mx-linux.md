@@ -49,8 +49,9 @@ $ sudo apt-get autoremove
 
 ```bash
 $ sudo apt-get -y install \
-    ufw fail2ban openssh-server openssh-client \
-    build-essential cmake lintian \
+    nmon \
+    ufw fail2ban openssh \
+    build-essential cmake lintian cloc \
     curl wget xclip ack silversearcher-ag dos2unix \
     fonts-firacode fonts-powerline ttf-ubuntu-font-family \
     python-dev python3-dev python-pip python3-pip python-setuptools python3-setuptools python3-pygments
@@ -124,7 +125,7 @@ $ git config --global -e
 # https://git-scm.com/docs/git-config
 
 [user]
-    name = binakot
+    name = Ivan Muratov
     email = binakot@gmail.com
 
 [github]
