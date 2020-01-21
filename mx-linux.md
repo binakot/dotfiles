@@ -502,7 +502,7 @@ Additional steps for some plugins:
 
 ```bash
 cd ~/.config/nvim/plugged/youcompleteme
-python3 install.py --all 
+python3 install.py --java-completer
 ```
 
 Replace `Caps Lock` with `Control`. Create and edit file `~/.xmodmap` with content:
