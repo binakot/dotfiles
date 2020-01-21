@@ -124,7 +124,7 @@ $ git config --global -e
 # https://git-scm.com/docs/git-config
 
 [user]
-    name = Ivan Muratov
+    name = binakot
     email = binakot@gmail.com
 
 [github]
@@ -388,6 +388,9 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'easymotion/vim-easymotion'
 
 " Nerdtree
 Plug 'scrooloose/nerdtree'
@@ -399,6 +402,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
 
 " Search
@@ -409,14 +413,10 @@ Plug 'mileszs/ack.vim'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-
-" Code
-Plug 'scrooloose/syntastic'
-Plug 'valloric/youcompleteme'
-Plug 'sheerun/vim-polyglot'
-Plug 'janko-m/vim-test'
+Plug 'junegunn/gv.vim'
 
 call plug#end()
+
 
 set updatetime=100
 
@@ -431,9 +431,6 @@ set signcolumn=yes
 set number
 set relativenumber
 
-set nowrap
-set formatoptions-=t
-
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -445,6 +442,9 @@ set shiftround
 
 set ignorecase
 set smartcase
+
+set nowrap
+set formatoptions-=t
 
 
 " Leader key
@@ -465,6 +465,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+
 " vitality
 autocmd FocusLost,BufLeave * :wa
 
@@ -475,8 +476,11 @@ colorscheme gruvbox
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='gruvbox'
 
+" vim-intent-guides
+let g:indent_guides_enable_on_vim_startup=1
+
 " nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 nmap ++ <plug>NERDCommenterToggle
@@ -488,19 +492,6 @@ map <leader>f :Files<CR>
 " ack
 map <leader>g :Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" ycm
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>d :YcmCompleter GoToDeclaration<CR>
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 ```
 
 Now update config and install all plugins in `nvim`:
@@ -508,13 +499,6 @@ Now update config and install all plugins in `nvim`:
 ```vim
 :source %
 :PlugInstall
-```
-
-Additional steps for some plugins:
-
-```bash
-cd ~/.config/nvim/plugged/youcompleteme
-python3 install.py --java-completer
 ```
 
 Replace `Caps Lock` with `Control`. Create and edit file `~/.xmodmap` with content:
