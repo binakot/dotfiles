@@ -52,7 +52,7 @@ $ sudo apt-get -y install \
     nmon \
     ufw fail2ban openssh \
     build-essential cmake lintian cloc \
-    curl wget xclip ack silversearcher-ag dos2unix \
+    curl wget xclip ack ripgrep silversearcher-ag dos2unix \
     fonts-firacode fonts-powerline ttf-ubuntu-font-family \
     python-dev python3-dev python-pip python3-pip python-setuptools python3-setuptools python3-pygments
 ```
@@ -425,9 +425,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
 
 " Search
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins'  }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -474,6 +474,7 @@ set lazyredraw
 set updatetime=250
 
 set showcmd
+set cmdheight=1
 set splitbelow
 
 set hidden
@@ -514,8 +515,10 @@ set linebreak
 let g:mapleader=','
 " Enable hotkeys for Russian layout
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+" Allows you to save files you opened without write permissions via sudo
+cmap w!! w !sudo tee %
 " Disable highlights when you press <leader><cr>
-map <silent> <leader><cr> :noh<cr>
+map <silent><leader><cr> :noh<cr>
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -531,7 +534,7 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 
-" vitality
+" vitality.vim
 autocmd FocusLost,BufLeave * :wa
 
 " gruvbox
@@ -545,34 +548,109 @@ let g:airline_theme='gruvbox'
 let g:indent_guides_enable_on_vim_startup=1
 
 " nerdtree
-map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>N :NERDTreeFind<CR>
 nmap ++ <plug>NERDCommenterToggle
 vmap ++ <plug>NERDCommenterToggle
 
+" vim-better-whitespace
+nmap <leader>y :StripWhitespace<CR>
+
+" denite.nvim
+call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
+call denite#custom#var('grep', 'command', ['rg'])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--heading', '-S'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'final_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+call denite#custom#var('buffer', 'date_format', '')
+
+let s:denite_options = {'default' : {
+\ 'split': 'floating',
+\ 'start_filter': 1,
+\ 'auto_resize': 1,
+\ 'source_names': 'short',
+\ 'prompt': 'λ ',
+\ 'statusline': 0,
+\ 'highlight_matched_char': 'QuickFixLine',
+\ 'highlight_matched_range': 'Visual',
+\ 'highlight_window_background': 'Visual',
+\ 'highlight_filter_background': 'DiffAdd',
+\ 'winrow': 1,
+\ 'vertical_preview': 1
+\ }}
+
+nmap ; :Denite buffer<CR>
+nmap <leader>t :DeniteProjectDir file/rec<CR>
+nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
+nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
+
+autocmd FileType denite-filter call s:denite_filter_my_settings()
+function! s:denite_filter_my_settings() abort
+  imap <silent><buffer> <C-o>
+  \ <Plug>(denite_filter_quit)
+  inoremap <silent><buffer><expr> <Esc>
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> <Esc>
+  \ denite#do_map('quit')
+  inoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  inoremap <silent><buffer><expr> <C-t>
+  \ denite#do_map('do_action', 'tabopen')
+  inoremap <silent><buffer><expr> <C-v>
+  \ denite#do_map('do_action', 'vsplit')
+  inoremap <silent><buffer><expr> <C-h>
+  \ denite#do_map('do_action', 'split')
+endfunction
+
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> <Esc>
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <C-o>
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <C-t>
+  \ denite#do_map('do_action', 'tabopen')
+  nnoremap <silent><buffer><expr> <C-v>
+  \ denite#do_map('do_action', 'vsplit')
+  nnoremap <silent><buffer><expr> <C-h>
+  \ denite#do_map('do_action', 'split')
+endfunction
+
 " fzf
 map <leader>f :Files<CR>
-
-" ack
-map <leader>g :Ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " vim-test
 let test#strategy="neovim"
 
 " coc.nvim
-" Use <tab> for trigger completion and navigate to next complete item
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gr <Plug>(coc-references)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 
-" Close preview window when completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 ```
 
