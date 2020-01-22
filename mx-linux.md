@@ -200,9 +200,8 @@ $ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/insta
 
 Theme:
 
-Download some of `Nerd Fonts` from site: https://www.nerdfonts.com. For example the patched 
-[Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k). 
-Copy `ttf` files in system font folder `/usr/share/fonts/truetype/`.
+Download some of `Nerd Fonts` from site: https://www.nerdfonts.com. Install any way you prefer. 
+For example just copy `ttf` files of patched [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#recommended-meslo-nerd-font-patched-for-powerlevel10k) in system fonts folder `/usr/share/fonts/truetype/`.
 
 Configure fonts and colors for `xcfe-terminal`. For example with [Solarized](https://ethanschoonover.com/solarized/):
 https://github.com/sgerrand/xfce4-terminal-colors-solarized.
@@ -238,9 +237,21 @@ $ git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $
 # plugins=(zsh-syntax-highlighting) # Note that zsh-syntax-highlighting must be the last plugin sourced.
 ```
 
-The complete list of plugins:
+Configure the file `~/.zshrc`:
 
 ```
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Path to your oh-my-zsh installation.
+export ZSH="/home/muratov/.oh-my-zsh"
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Which plugins would you like to load?
 plugins=(
     git tmux vi-mode fzf z
     colorize colored-man-pages
@@ -248,17 +259,37 @@ plugins=(
     docker
     zsh-completions zsh-autosuggestions zsh-syntax-highlighting
 )
-```
 
-List of aliases in `~/.zshrc`:
+source $ZSH/oh-my-zsh.sh
 
-```bash
+# Aliases
 alias v="nvim"
 alias tmux="tmux -2"
 alias pcat="pygmentize -f terminal256 -O style=native -g"
 alias pls="colorls -A --sd --gs"
-alias plsa="colorls -lA --sd --gs"
+alias plsa="colorls -Al --sd --gs"
 alias ptree="colorls --tree --sd --gs"
+
+# Tmux integration
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART_ONCE=true
+export ZSH_TMUX_AUTOCONNECT=true
+export ZSH_TMUX_AUTOQUIT=false
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Enable FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/muratov/.sdkman"
+[[ -s "/home/muratov/.sdkman/bin/sdkman-init.sh" ]] && source "/home/muratov/.sdkman/bin/sdkman-init.sh"
 ```
 
 #### ✅ Tmux
@@ -341,21 +372,6 @@ Reload config `$ tmux source ~/.tmux.conf`
 and install the plugins in `tmux` with `Ctrl+A -> I`.
 Later for plugins updates use `Ctrl+A -> U`.
 
-Configure `zsh` plugin for `tmux` adding to file `~/.zshrc`:
-
-```bash
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOSTART_ONCE=true
-export ZSH_TMUX_AUTOCONNECT=true
-export ZSH_TMUX_AUTOQUIT=false
-```
-
-And start to use:
-
-```bash
-$ source ~/.zshrc
-```
-
 #### ✅ (Neo)Vim
 
 Install:
@@ -384,6 +400,7 @@ call plug#begin()
 " Common
 Plug 'tpope/vim-sensible'
 Plug 'sjl/vitality.vim'
+Plug 'mhinz/vim-startify'
 
 " UI
 Plug 'morhetz/gruvbox'
@@ -417,21 +434,63 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
 
+" Code
+Plug 'janko-m/vim-test'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+      \ 'coc-tabnine',
+      \ 'coc-actions',
+      \ 'coc-lists',
+      \ 'coc-snippets',
+      \ 'coc-highlight',
+      \ 'coc-yank',
+      \
+      \ 'coc-yaml',
+      \ 'coc-json',
+      \ 'coc-xml',
+      \
+      \ 'coc-tsserver',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-prettier',
+      \
+      \ 'coc-java',
+      \ 'coc-python',
+      \ 'coc-sql',
+      \
+      \ 'coc-git',
+      \ 'coc-spell-checker',
+      \ 'coc-docker',
+      \
+      \ 'coc-diagnostic',
+      \]
+
 call plug#end()
 
 
-set updatetime=100
+set nocompatible
+set ttyfast
+set lazyredraw
+set updatetime=250
 
+set showcmd
+set splitbelow
+
+set hidden
 set autoread
 set autowrite
 set autowriteall
-set noswapfile
 set clipboard+=unnamedplus
 
+set noswapfile
+set nobackup
+set nowritebackup
+
 syntax enable
-set signcolumn=yes
+set cursorline
 set number
 set relativenumber
+set signcolumn=yes
 
 set tabstop=4
 set softtabstop=4
@@ -442,15 +501,19 @@ set autoindent
 set cindent
 set shiftround
 
+set hlsearch
 set ignorecase
 set smartcase
 
-set nowrap
-set formatoptions-=t
+set nofoldenable
+set wrap
+set linebreak
 
 
 " Leader key
 let g:mapleader=','
+" Enable hotkeys for Russian layout
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 " Disable highlights when you press <leader><cr>
 map <silent> <leader><cr> :noh<cr>
 " Smart way to move between windows
@@ -494,6 +557,23 @@ map <leader>f :Files<CR>
 " ack
 map <leader>g :Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" vim-test
+let test#strategy="neovim"
+
+" coc.nvim
+" Use <tab> for trigger completion and navigate to next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+" Close preview window when completion is done
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 ```
 
 Now update config and install all plugins in `nvim`:
@@ -564,6 +644,7 @@ $ sdk default java $VERSION # set a specific version as default for all terminal
 ```bash
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 $ nvm install node
+$ npm install -g neovim
 ```
 
 * [Docker](https://docs.docker.com/install/linux/docker-ce/debian/)
