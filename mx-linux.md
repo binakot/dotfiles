@@ -50,9 +50,10 @@ $ sudo apt-get autoremove
 ```bash
 $ sudo apt-get -y install \
     nmon \
-    ufw fail2ban openssh \
+    ufw fail2ban openssh \    
+    curl wget xsel xclip \
     build-essential cmake lintian cloc \
-    curl wget xclip ack ripgrep silversearcher-ag dos2unix \
+    ack ripgrep silversearcher-ag dos2unix \
     fonts-firacode fonts-powerline ttf-ubuntu-font-family \
     python-dev python3-dev python-pip python3-pip python-setuptools python3-setuptools python3-pygments
 ```
@@ -326,6 +327,7 @@ bind-key -T copy-mode-vi v send-keys -X begin-selection
 bind-key -T copy-mode-vi y send-keys -X copy-selection
 bind-key -T copy-mode-vi r send-keys -X rectangle-toggle
 bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+set -sg escape-time 10
 
 # Start windows numbering at 1
 set -g base-index 1
@@ -355,6 +357,7 @@ bind -n M-Down select-pane -D
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-yank'
 
 set -g @plugin 'jimeh/tmux-themepack'
 set -g @themepack 'powerline/default/cyan'
@@ -467,15 +470,22 @@ let g:coc_global_extensions = [
 
 call plug#end()
 
-
+set encoding=utf-8
+set termencoding=utf-8
 set nocompatible
 set ttyfast
 set lazyredraw
+set mouse-=a
 set updatetime=250
 
 set showcmd
 set cmdheight=1
+set laststatus=2
+set scrolloff=999
+set wildmenu
+set wildmode=longest:full,full
 set splitbelow
+set splitright
 
 set hidden
 set autoread
@@ -488,10 +498,12 @@ set nobackup
 set nowritebackup
 
 syntax enable
+set ruler
 set cursorline
 set number
 set relativenumber
 set signcolumn=yes
+set shortmess+=c
 
 set tabstop=4
 set softtabstop=4
@@ -503,13 +515,19 @@ set cindent
 set shiftround
 
 set hlsearch
+set incsearch
 set ignorecase
 set smartcase
+set showmatch
+set matchpairs+=<:>
+set backspace=indent,eol,start
+set list
 
+set foldmethod=syntax
 set nofoldenable
 set wrap
 set linebreak
-
+set showbreak=↪
 
 " Leader key
 let g:mapleader=','
@@ -637,21 +655,41 @@ map <leader>f :Files<CR>
 let test#strategy="neovim"
 
 " coc.nvim
-nmap <silent> <leader>gd <Plug>(coc-definition)
-nmap <silent> <leader>gr <Plug>(coc-references)
-nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gh <Plug>(coc-doHover)
+nmap <leader> rn <Plug>(coc-rename)
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+nmap [g <Plug>(coc-git-prevchunk)
+nmap ]g <Plug>(coc-git-nextchunk)
+nmap gs <Plug>(coc-git-chunkinfo)
+nmap gu :CocCommand git.chunkUndo<cr>
+
+inoremap <silent><expr> <c-space> coc#refresh()
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+  endif
 endfunction
 
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
 ```
 
 Now update config and install all plugins in `nvim`:
