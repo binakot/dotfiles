@@ -127,7 +127,7 @@ $ git config --global -e
 
 [user]
     name = Ivan Muratov
-    email = binakot@gmail.com
+    email = muratov.i@firstmk.ru
 
 [github]
     user = binakot
@@ -185,8 +185,14 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.yml, *.yaml]
+[{*.js, *.json}]
 indent_size = 2
+
+[{*.yml, *.yaml}]
+indent_size = 2
+
+[*.java]
+continuation_indent_size = 4
 ```
 
 #### ✅ Zsh + Oh My Zsh + FZF
@@ -254,10 +260,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Which plugins would you like to load?
 plugins=(
-    git tmux vi-mode fzf z
+    ssh-agent tmux vi-mode
+    fzf z
     colorize colored-man-pages
     bgnotify
-    docker
+    git docker
     zsh-completions zsh-autosuggestions zsh-syntax-highlighting
 )
 
