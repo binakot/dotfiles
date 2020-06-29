@@ -165,6 +165,7 @@ $ git config --global -e
     configs = config --list
     aliases = config --get-regexp alias
     tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    fp = !git fetch --all && git pull --all
 ```
 
 Initial `.gitignore_global` you can take from [here](https://gist.github.com/octocat/9257657)
@@ -257,6 +258,7 @@ export ZSH="/home/muratov/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Which plugins would you like to load?
 plugins=(
@@ -270,6 +272,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Custom actions
+xgamma -rgamma 1 -ggamma 1 -bgamma 1 > /dev/null 2>&1
+ssh-add -k ~/.ssh/id_rsa ~/.ssh/binakot.github.id_rsa ~/.ssh/muratovii.bitbucket.id_rsa > /dev/null 2>&1
+
 # Aliases
 alias v="nvim"
 alias tmux="tmux -2"
@@ -277,6 +283,7 @@ alias pcat="pygmentize -f terminal256 -O style=native -g"
 alias pls="colorls -A --sd --gs"
 alias plsa="colorls -Al --sd --gs"
 alias ptree="colorls --tree --sd --gs"
+alias clear="timeout 3 cmatrix; clear"
 
 # Tmux integration
 export ZSH_TMUX_AUTOSTART=true
