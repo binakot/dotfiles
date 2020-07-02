@@ -69,6 +69,14 @@ System fonts: `Ubuntu 10`
 
 Terminal fonts: `Meslo 10`
 
+Install codecs to fix video players in browsers:
+
+```bash
+$ sudo apt-get -y install \
+gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-plugins-good \
+libavcodec-extra chromium-codecs-ffmpeg-extra libdvd-pkg
+```
+
 #### ✅ Ssh
 
 Configure `fail2ban` to prevent brute-force attacks: `$ sudo vi /etc/fail2ban/jail.local`:
