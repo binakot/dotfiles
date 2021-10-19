@@ -1,5 +1,49 @@
 # Home Server
 
+```bash
+user@home-server:~$ screenfetch
+                          ./+o+-       user@home-server
+                  yyyyy- -yyyyyy+      OS: Ubuntu 20.04 focal
+               ://+//////-yyyyyyo      Kernel: x86_64 Linux 5.4.0-89-generic
+           .++ .:/++++++/-.+sss/`      Uptime: 2m
+         .:++o:  /++++++++/:--:/-      Packages: 664
+        o:+o+:++.`..```.-/oo+++++/     Shell: bash 5.0.17
+       .:+o:+o/.          `+sssoo+/    Disk: 7.1G / 208G (4%)
+  .++/+:+oo+o:`             /sssooo.   CPU: Intel Xeon E5-2620 v2 @ 12x 2.6GHz [32.0°C]
+ /+++//+:`oo+o               /::--:.   GPU: GeForce GT 710
+ \+/+o+++`o++o               ++////.   RAM: 554MiB / 7878MiB
+  .++.o+++oo+:`             /dddhhh.
+       .+.o+oo:.          `oddhhhh+
+        \+.++o+o``-````.:ohdhhhhh+
+         `:o+++ `ohhhhhhhhyo++os:
+           .o:`.syhhhhhhh/.oo++o`
+               /osyyyyyyo++ooo+++/
+                   ````` +oo+++o\:
+                          `oo++.
+user@home-server:~$ neofetch
+            .-/+oossssoo+/-.               user@home-server
+        `:+ssssssssssssssssss+:`           ----------------
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04.3 LTS x86_64
+    .ossssssssssssssssssdMMMNysssso.       Kernel: 5.4.0-89-generic
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Uptime: 2 mins
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Packages: 661 (dpkg), 4 (snap)
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Shell: bash 5.0.17
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Resolution: 1600x900
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Terminal: /dev/pts/0
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   CPU: Intel Xeon E5-2620 v2 (12) @ 2.600GHz
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   GPU: NVIDIA GeForce GT 710
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Memory: 296MiB / 7878MiB
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
+  +sssssssssdmydMMMMMMMMddddyssssssss+
+   /ssssssssssshdmNNNNmyNMMMMhssssss/
+    .ossssssssssssssssssdMMMNysssso.
+      -+sssssssssssssssssyyyssss+-
+        `:+ssssssssssssssssss+:`
+            .-/+oossssoo+/-.
+
+```
+
 ## Install OS
 
 Ubuntu Server 20.04 LTS
@@ -44,7 +88,8 @@ $ sudo reboot
 $ sudo apt-get install \
     screen \
     mc \
-    htop iotop nmon
+    htop iotop nmon \
+    screenfetch neofetch
 ```
 
 * Docker
