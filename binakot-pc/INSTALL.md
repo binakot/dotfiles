@@ -41,12 +41,11 @@ binakot@binakot-pc:~$ neofetch
       ///////////////////////////
          /////////////////////                                    
              /////////////                                        
-
 ```
 
 ## Install OS
 
-Pop!_OS 20.04 LTS
+[Pop!_OS](https://pop.system76.com/) 20.04 LTS
  
 ## Initial configuration
 
@@ -72,7 +71,7 @@ $ sudo apt-get install \
     screenfetch neofetch
 ```
 
-* Docker
+* [Docker](https://www.docker.com/)
 
 ```bash
 $ sudo apt-get install \
@@ -85,8 +84,8 @@ $ sudo apt-get install \
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 $ echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   
 $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
@@ -99,12 +98,158 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose --version
 ```
 
+* [SDKMAN!](https://sdkman.io/)
+
+```bash
+$ curl -s "https://get.sdkman.io" | bash
+
+$ sdk list java             # list of available builds
+$ sdk install java          # install the latest LTS build
+$ sdk current java          # show the Java version for the current terminal
+
+$ sdk use java $VERSION     # switch the Java version for the current terminal
+$ sdk default java $VERSION # set a specific version as default for all terminals
+```
+
+* [NVM](https://github.com/nvm-sh/nvm)
+
+```bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+$ nvm ls-remote             # list available versions of Node
+$ nvm install --lts         # install the latest LTS release of Node
+$ nvm current               # show the Node version for the current terminal
+```
+
+* [Google Chrome](https://www.google.com/intl/ru/chrome/)
+
+* [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+
+* [Slack](https://slack.com/intl/en-ru/downloads/instructions/ubuntu)
+
+* [Telegram](https://desktop.telegram.org/)
+
+```bash
+$ sudo apt-get install telegram-desktop
+```
+
 ---
+
+## SSH
+
+Generate SSH key:
+
+```bash
+$ ssh-keygen -t ed25519
+$ ssh-add ~/.ssh/id_ed25519
+$ ssh-add -l
+```
+
+Create and configure `~/.ssh/config`:
+
+```text
+Host github.com
+    HostName github.com
+    User binakot
+    IdentityFile ~/.ssh/id_ed25519
+
+Host gitlab.com
+    HostName gitlab.com
+    User binakot
+    IdentityFile ~/.ssh/id_ed25519
+
+Host bitbucket.org
+    HostName bitbucket.org
+    User muratovii
+    IdentityFile ~/.ssh/id_ed25519
+```
 
 ## Git
 
 Install `git`:
 
 ```bash
-sudo apt-get install git
+$ sudo apt-get install git
 ```
+
+Configure `git`:
+
+```bash
+$ git config --global -e
+```
+
+```text
+[user]
+    name = Ivan Muratov
+    email = binakot@gmail.com
+```
+
+Configure `~/.gitignore_global`:
+
+```text
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+```
+
+## ZSH
+
+> TODO
+
+## Others
+
+* Configure `~/.editorconfig`:
+
+```text
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+continuation_indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.java]
+indent_size = 4
+continuation_indent_size = 4
+```
+
+---
