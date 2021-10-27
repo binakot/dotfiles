@@ -68,7 +68,8 @@ $ sudo apt-get install \
     mc \
     curl wget \
     htop iotop nmon \
-    screenfetch neofetch
+    screenfetch neofetch \
+    cloc
 ```
 
 * [Docker](https://www.docker.com/)
