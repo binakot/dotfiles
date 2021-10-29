@@ -1,3 +1,3 @@
-# Binakot iMac
+# Binakot's iMac
 
 > WIP
