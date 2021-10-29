@@ -233,7 +233,7 @@ Install `ZSH` as default shell:
 $ sudo apt-get install zsh
 $ zsh --version
 $ chsh -s $(which zsh)
-$ logout
+$ gnome-session-quit
 ```
 
 After login you should check that `ZSH` is default shell:
