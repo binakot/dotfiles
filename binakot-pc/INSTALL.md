@@ -236,7 +236,7 @@ $ chsh -s $(which zsh)
 $ gnome-session-quit
 ```
 
-After login you should check that `ZSH` is default shell:
+After reboot you should check that `ZSH` is default shell:
 
 ```bash
 $ echo $SHELL
@@ -253,7 +253,6 @@ Plugins:
 
 ```bash
 $ nano ~/.zshrc
-
 plugins=(
   git
 )
@@ -261,10 +260,18 @@ plugins=(
 
 Theme:
 
-```bash
-$ nano ~/.zshrc
+Install patched fonts: https://github.com/romkatv/powerlevel10k#manual-font-installation.
 
-ZSH_THEME="robbyrussell"
+Then install `powerlevel10k` and configure it:
+
+```bash
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+$ nano ~/.zshrc
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+$ p10k configure
+yyyy3121111121n1y
 ```
 
 ## Others
