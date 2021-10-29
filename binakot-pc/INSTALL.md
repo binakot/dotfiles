@@ -1,13 +1,14 @@
-# Binakot PC
+# Binakot's PC
 
 ```bash
 binakot@binakot-pc:~$ screenfetch
+
                              binakot@binakot-pc
                              OS: Pop 20.04 focal
                              Kernel: x86_64 Linux 5.13.0-7614-generic
-         #####               Uptime: 14m
+         #####               Uptime: 3h 19m
         #######              Packages: Unknown
-        ##O#O##              Shell: bash 5.0.17
+        ##O#O##              Shell: zsh 5.8
         #######              Resolution: 3440x1440
       ###########            DE: GNOME 3.38.3
      #############           WM: Mutter
@@ -15,32 +16,33 @@ binakot@binakot-pc:~$ screenfetch
     ################         GTK Theme: Pop-dark [GTK2/3]
    #################         Icon Theme: Pop
  #####################       Font: Fira Sans Semi-Light 10
- #####################       Disk: 8,1G / 130G (7%)
-   #################         CPU: Intel Core i7-5820K @ 12x 4,3GHz [47.0°C]
+ #####################       Disk: 29G / 130G (24%)
+   #################         CPU: Intel Core i7-5820K @ 12x 4,3GHz [46.0°C]
                              GPU: NVIDIA GeForce GTX 1060 6GB
-                             RAM: 2713MiB / 48100MiB
+                             RAM: 3719MiB / 48100MiB
 
 binakot@binakot-pc:~$ neofetch
-             /////////////                binakot@binakot-pc 
-         /////////////////////            ------------------ 
-      ///////*767////////////////         OS: Pop!_OS 20.04 LTS x86_64 
-    //////7676767676*//////////////       Kernel: 5.13.0-7614-generic 
-   /////76767//7676767//////////////      Uptime: 14 mins 
-  /////767676///*76767///////////////     Packages: 1808 (dpkg) 
- ///////767676///76767.///7676*///////    Shell: bash 5.0.17 
-/////////767676//76767///767676////////   Resolution: 3440x1440 
-//////////76767676767////76767/////////   DE: GNOME 
-///////////76767676//////7676//////////   WM: Mutter 
-////////////,7676,///////767///////////   WM Theme: Pop 
-/////////////*7676///////76////////////   Theme: Pop-dark [GTK2/3] 
-///////////////7676////////////////////   Icons: Pop [GTK2/3] 
- ///////////////7676///767////////////    Terminal: gnome-terminal 
-  //////////////////////'////////////     CPU: Intel i7-5820K (12) @ 4.300GHz 
-   //////.7676767676767676767,//////      GPU: NVIDIA GeForce GTX 1060 6GB 
-    /////767676767676767676767/////       Memory: 2202MiB / 48100MiB 
+
+             /////////////                binakot@binakot-pc
+         /////////////////////            ------------------
+      ///////*767////////////////         OS: Pop!_OS 20.04 LTS x86_64
+    //////7676767676*//////////////       Kernel: 5.13.0-7614-generic
+   /////76767//7676767//////////////      Uptime: 3 hours, 19 mins
+  /////767676///*76767///////////////     Packages: 1870 (dpkg)
+ ///////767676///76767.///7676*///////    Shell: zsh 5.8
+/////////767676//76767///767676////////   Resolution: 3440x1440
+//////////76767676767////76767/////////   DE: GNOME
+///////////76767676//////7676//////////   WM: Mutter
+////////////,7676,///////767///////////   WM Theme: Pop
+/////////////*7676///////76////////////   Theme: Pop-dark [GTK2/3]
+///////////////7676////////////////////   Icons: Pop [GTK2/3]
+ ///////////////7676///767////////////    Terminal: gnome-terminal
+  //////////////////////'////////////     CPU: Intel i7-5820K (12) @ 4.300GHz
+   //////.7676767676767676767,//////      GPU: NVIDIA GeForce GTX 1060 6GB
+    /////767676767676767676767/////       Memory: 3176MiB / 48100MiB
       ///////////////////////////
-         /////////////////////                                    
-             /////////////                                        
+         /////////////////////
+             /////////////
 ```
 
 ## Install OS
@@ -236,7 +238,7 @@ $ chsh -s $(which zsh)
 $ gnome-session-quit
 ```
 
-After reboot you should check that `ZSH` is default shell:
+After reboot check that `ZSH` is default shell:
 
 ```bash
 $ echo $SHELL
@@ -286,7 +288,7 @@ $ p10k configure
 yyyy3121111121n1y
 ```
 
-## Others
+## Misc
 
 * Configure `~/.editorconfig`:
 
