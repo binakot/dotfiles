@@ -6,9 +6,10 @@ services:
     image: homeassistant/home-assistant:stable
     restart: unless-stopped
     volumes:
-      - ./config:/config
+      - ./homeassistant/config:/config
       - /etc/localtime:/etc/localtime:ro
     network_mode: host
+    user: '1000:1000'
 
   portainer:
     container_name: portainer
