@@ -161,7 +161,7 @@ Host gitlab.com
 
 Host bitbucket.org
     HostName bitbucket.org
-    User muratovii
+    User binakot
     IdentityFile ~/.ssh/id_ed25519
 ```
 
@@ -227,7 +227,21 @@ Thumbs.db
 
 ## ZSH
 
-> TODO
+Install `ZSH` as default shell:
+
+```bash
+$ sudo apt-get install zsh
+$ zsh --version
+$ chsh -s $(which zsh)
+$ logout
+```
+
+After login you should check that `ZSH` is default shell:
+
+```bash
+$ echo $SHELL
+$ $SHELL --version
+```
 
 ## Others
 
