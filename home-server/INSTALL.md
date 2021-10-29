@@ -20,6 +20,7 @@ user@home-server:~$ screenfetch
                /osyyyyyyo++ooo+++/
                    ````` +oo+++o\:
                           `oo++.
+
 user@home-server:~$ neofetch
             .-/+oossssoo+/-.               user@home-server
         `:+ssssssssssssssssss+:`           ----------------
