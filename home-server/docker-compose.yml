@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: homeassistant/home-assistant:stable
+    restart: unless-stopped
+    volumes:
+      - ./config:/config
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: host
+
+  portainer:
+    container_name: portainer
+    image: portainer/portainer:latest
+    restart: unless-stopped
+    volumes:
+      - ./portainer:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '9000:9000'
