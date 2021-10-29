@@ -243,6 +243,30 @@ $ echo $SHELL
 $ $SHELL --version
 ```
 
+Now install `oh-my-zsh` framework:
+
+```bash
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Plugins:
+
+```bash
+$ nano ~/.zshrc
+
+plugins=(
+  git
+)
+```
+
+Theme:
+
+```bash
+$ nano ~/.zshrc
+
+ZSH_THEME="robbyrussell"
+```
+
 ## Others
 
 * Configure `~/.editorconfig`:
