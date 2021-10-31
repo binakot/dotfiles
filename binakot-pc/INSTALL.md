@@ -70,7 +70,7 @@ $ sudo apt-get install \
     mc \
     curl wget \
     htop iotop nmon \
-    screenfetch neofetch \
+    screenfetch neofetch hardinfo \
     cloc
 ```
 
