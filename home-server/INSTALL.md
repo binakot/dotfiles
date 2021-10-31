@@ -42,13 +42,12 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   GPU: NVIDIA GeForce GT 710
       -+sssssssssssssssssyyyssss+-
         `:+ssssssssssssssssss+:`
             .-/+oossssoo+/-.
-
 ```
 
 ## Install OS
 
-Ubuntu Server 20.04 LTS
- 
+[Ubuntu Server](https://ubuntu.com/download/server) 20.04 LTS
+
 ## Initial configuration
 
 * First update
@@ -73,12 +72,6 @@ $ sudo ufw allow ssh
 $ sudo ufw status verbose
 ```
 
-* Reboot
-
-```bash
-$ sudo reboot
-```
-
 ---
 
 ## Install software
@@ -87,13 +80,14 @@ $ sudo reboot
 
 ```bash
 $ sudo apt-get install \
-    screen \
-    mc \
+    screen mc \
+    curl wget \
     htop iotop nmon \
+    lm-sensors \
     screenfetch neofetch
 ```
 
-* Docker
+* [Docker](https://www.docker.com/)
 
 ```bash
 $ sudo apt-get install \
