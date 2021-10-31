@@ -70,8 +70,11 @@ $ sudo apt-get install \
     mc \
     curl wget \
     htop iotop nmon \
-    screenfetch neofetch hardinfo \
+    lm-sensors hardinfo \
+    screenfetch neofetch \
     cloc
+    
+$ sudo sensors-detect
 ```
 
 * [Docker](https://www.docker.com/)
