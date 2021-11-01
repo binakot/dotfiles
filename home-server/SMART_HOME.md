@@ -36,9 +36,11 @@ Now reboot `Home Assistant` from web-ui.
 And finally add new integration in configuration menu named `HACS`.
 Initial startup may take more then one hour because it uses GitHub API with rate limit.
 
-## Install Xiaomi Gateway 3 integration
+## Install HA integrations
 
-[Xiaomi Gateway 3 for Home Assistant](https://github.com/AlexxIT/XiaomiGateway3) by @AlexxIT.
+* [Xiaomi Gateway 3 for Home Assistant](https://github.com/AlexxIT/XiaomiGateway3) by @AlexxIT.
+
+* [Aqara Gateway for Home Assistant](https://github.com/niceboygithub/AqaraGateway) by @niceboygithub.
 
 ---
 
