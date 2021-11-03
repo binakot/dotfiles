@@ -1,4 +1,4 @@
-# SMART HOME
+# Smart Home
 
 Based on [Home Assistant](https://www.home-assistant.io/) in `Docker` environment.
 

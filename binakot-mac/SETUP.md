@@ -1,0 +1,3 @@
+# iMac Setup
+
+> WIP
