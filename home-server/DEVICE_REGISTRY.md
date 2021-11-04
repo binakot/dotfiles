@@ -5,7 +5,7 @@
 * ✅ Eltex ONT NTU-1
 * ✅ Mikrotik hEX RB750Gr3
 * ✅ D-Link DGS-1024D
-* ❌ Wi-Fi Router Xiaomi Mi AIoT Router AX3600
+* ✅ Wi-Fi Router Xiaomi Mi AIoT Router AX3600 (China firmware for signal power unlock)
 * ❌ Wi-Fi Router CPF903 3G/4G/LTE
 * ❌ Raspberry Pi 4 Model B, ICE-Tower CPU Cooling Fan V2.0
 * ✅ Kllisre X79 M2, Intel Xeon E5-2620 v2, Deepcool Gamma Archer Pro, Samsung DDR3 1600 4GB x2, ASUS GeForce GT 710 2 GB, Kingston A400 SSD 240GB
