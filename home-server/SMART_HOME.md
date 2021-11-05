@@ -11,10 +11,14 @@ $ docker-compose pull
 $ docker-compose up -d
 ```
 
-Open port for access to home assistant web-ui:
+Open port for access to home assistant web-ui and Apple HomeKit integration:
 
 ```bash
+# Hassio web-ui
 $ sudo ufw allow 8123
+# Hassio HomeKit integration 
+$ sudo ufw allow 5353
+$ sudo ufw allow 21064
 ```
 
 Open `Home Assistant` at [http://home-server.lan:8123](http://home-server.lan:8123).
@@ -41,6 +45,14 @@ Initial startup may take more then one hour because it uses GitHub API with rate
 * [Xiaomi Gateway 3 for Home Assistant](https://github.com/AlexxIT/XiaomiGateway3) by @AlexxIT.
 
 * [Aqara Gateway for Home Assistant](https://github.com/niceboygithub/AqaraGateway) by @niceboygithub.
+
+* [Yandex Smart Home for Home Assistant](https://github.com/dmitry-k/yandex_smart_home) by @dmitry-k.
+
+* [Yandex Station for Home Assistant](https://github.com/AlexxIT/YandexStation) by @AlexxIT.
+
+* [Yandex Dialogs for Home Assistant](https://github.com/AlexxIT/YandexDialogs) by @AlexxIT.
+
+* [HomeKit integration](https://www.home-assistant.io/integrations/homekit/)
 
 ---
 
