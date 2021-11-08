@@ -127,6 +127,14 @@ $ nvm install --lts         # install the latest LTS release of Node
 $ nvm current               # show the Node version for the current terminal
 ```
 
+* [Python](https://www.python.org/)
+
+```bash
+$ sudo apt-get install \
+    build-essential libssl-dev libffi-dev \
+    python3-dev python3-pip python3-venv
+```
+
 * [Google Chrome](https://www.google.com/intl/ru/chrome/)
 
 * [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)

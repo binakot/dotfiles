@@ -15,7 +15,7 @@
 | Name | ID | Protocols | Integrations | Link | Comments |
 | --- | --- | --- | --- | --- | --- |
 | ✅ Xiaomi Gateway 3 | ZNDMWG03LM | Wi-Fi 2.4 GHz, ZigBee 3.0, Bluetooth 5.0 / Mesh | Mi Home, Mijia, Apple HomeKit | https://xiaomi-smarthome.ru/shlyuz-xiaomi-gateway-3/ | Lock firmware on v1.5.0_0102 for integration via https://github.com/AlexxIT/XiaomiGateway3 |
-| ❌ Aqara Hub M1S | ZHWG15LM | Wi-Fi 2.4 GHz, ZigBee 3.0 | Mi Home, Aqara Home, Apple HomeKit | https://xiaomi-smarthome.ru/aqara-hub-m1s-zhwg15lm/ | - |
+| ✅ Aqara Hub M1S | HM1S-G01 | Wi-Fi 2.4 GHz, ZigBee 3.0 | Mi Home, Aqara Home, Apple HomeKit | https://xiaomi-smarthome.ru/aqara-hub-m1s-zhwg15lm/ | - |
 | ✅ Apple HomePod Mini | A2374 | Wi-Fi 2.4 GHz, Bluetooth 5.0 | Apple HomeKit | https://www.apple.com/homepod-mini/ | - |
 | ✅ Yandex Station | YNDX-0001 | Wi-Fi 2.4 GHz / 5 GHz, Bluetooth 4.1 / BLE, HDMI 1.4 | Умный дом Яндекс | https://yandex.ru/alice/station/ | - |
 

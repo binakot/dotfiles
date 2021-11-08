@@ -70,3 +70,9 @@ To update the stack use:
 $ docker-compose pull
 $ docker-compose up -d
 ```
+
+Grab all `MiHome` devices tokens:
+
+```bash
+$ bash <(curl -L https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor/raw/master/run.sh)
+```
