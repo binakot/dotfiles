@@ -36,9 +36,9 @@
 
 | Name | ID | Protocols | Integrations | Link | Comments |
 | --- | --- | --- | --- | --- | --- |
-| ❌ Aqara Wall Switch D1 Single Rocker (5) | QBKG04LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-wall-light-switch-one-button/ | No zero line |
-| ❌ Aqara Wall Switch D1 Double Rocker (4) | QBKG03LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-wall-light-switch-double-key/ | No zero line |
-| ❌ Aqara Wall Switch D1 Triple Rocker (1) | QBKG25LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/vyklyuchateli-xiaomi-aqara-smart-wall-switch-d1/ | No zero line |
+| ✅ Aqara Wall Switch D1 Single Rocker (5) | QBKG04LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-wall-light-switch-one-button/ | No zero line |
+| ✅ Aqara Wall Switch D1 Double Rocker (4) | QBKG03LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-wall-light-switch-double-key/ | No zero line |
+| ✅ Aqara Wall Switch D1 Triple Rocker (1) | QBKG25LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/vyklyuchateli-xiaomi-aqara-smart-wall-switch-d1/ | No zero line |
 | ✅ Xiaomi Smart Plug (2) | ZNCZ04LM | ZigBee 3.0 | Mi Home, Mijia, Google Home, Amazon Alexa | https://market.yandex.ru/product--umnaia-rozetka-xiaomi-smart-plug-ZigBee-zncz04lm-mi-belyi/767548040 | - |
 
 ## Lights
@@ -56,6 +56,6 @@
 | --- | --- | --- | --- | --- | --- |
 | ❌ Aqara Magic Cube | MFKZQ01LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-cube-controller/ | - |
 | ❌ Aqara Wireless Mini Switch (2) | WXKG11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-wireless-switch/ | - |
-| ❌ Xiaomi Smart Kettle Pro | BHR4198GL | Bluetooth 5.0 | Mi Home, Aqara Home, Mijia | https://market.yandex.ru/product--chainik-xiaomi-mi-smart-kettle-pro/833199025 | - |
+| ✅ Xiaomi Smart Kettle Pro | BHR4198GL | Bluetooth 5.0 | Mi Home, Aqara Home, Mijia | https://market.yandex.ru/product--chainik-xiaomi-mi-smart-kettle-pro/833199025 | - |
 | ❌ Xiaomi Mi Robot Vacuum-Mop Essential | MJSTG1 | Wi-Fi 2.4 GHz | Mi Home, Mijia, Google Home, Amazon Alexa | https://www.mi.com/ru/mi-robot-vacuum-mop-essential/ | - |
 | ❌ Samsung SmartTV 55 4K | UE55NU7500U | Ethernet, Wi-Fi 2.4 GHz / 5 GHz, Bluetooth 5.0 | Samsung SmartThings | https://www.mvideo.ru/products/televizor-samsung-ue55nu7500u-10018553 | - |
