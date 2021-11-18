@@ -26,9 +26,9 @@
 | ❌ Xiaomi N1 Smart Outdoor Camera (2) | CMSXJ25A | Ethernet, Wi-Fi 2.4 GHz | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/xiaobai-n1-smart-outdoor-camera/ | Wi-Fi Hotspot function |
 | ✅ Aqara Camera G2 | ZNSXJ12LM | Wi-Fi 2.4 GHz, ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-smart-camera-g2/ | MQTT unsupported |
 | ❌ Aqara Motion Sensor (3) | RTCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-dvizheniya-aqara/ | - |
-| ❌ Aqara Window Door Sensor (4) | MCCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-window-door-sensor/ | - |
-| ❌ Aqara Water Sensor (3) | SJCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/xiaomi-datchik-protechek/ | - |
-| ❌ Honeywell Gas Leak Detector | JTQJ-BF-01 | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-gas-leak-detector/ | - |
+| ✅ Aqara Window Door Sensor (4) | MCCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-window-door-sensor/ | - |
+| ✅ Aqara Water Sensor (3) | SJCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/xiaomi-datchik-protechek/ | - |
+| ✅ Honeywell Gas Leak Detector | JTQJ-BF-01 | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-gas-leak-detector/ | - |
 | ❌ Honeywell Fire Alarm Detector | JTYJ-GD-01LM/BW | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-fire-alarm-detector/ | - |
 | ✅ Aqara Humidity & Temperature Sensor (4) | WSDCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-temperatury-vlazhnosti-i-davleniya-aqara/ | - |
 
@@ -55,7 +55,7 @@
 | Name | ID | Protocols | Integrations | Link | Comments |
 | --- | --- | --- | --- | --- | --- |
 | ❌ Aqara Magic Cube | MFKZQ01LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-cube-controller/ | - |
-| ❌ Aqara Wireless Mini Switch (2) | WXKG11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-wireless-switch/ | - |
+| ✅ Aqara Wireless Mini Switch (2) | WXKG11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-wireless-switch/ | - |
 | ✅ Xiaomi Smart Kettle Pro | BHR4198GL | Bluetooth 5.0 | Mi Home, Aqara Home, Mijia | https://market.yandex.ru/product--chainik-xiaomi-mi-smart-kettle-pro/833199025 | - |
-| ❌ Xiaomi Mi Robot Vacuum-Mop Essential | MJSTG1 | Wi-Fi 2.4 GHz | Mi Home, Mijia, Google Home, Amazon Alexa | https://www.mi.com/ru/mi-robot-vacuum-mop-essential/ | - |
-| ❌ Samsung SmartTV 55 4K | UE55NU7500U | Ethernet, Wi-Fi 2.4 GHz / 5 GHz, Bluetooth 5.0 | Samsung SmartThings | https://www.mvideo.ru/products/televizor-samsung-ue55nu7500u-10018553 | - |
+| ✅ Xiaomi Mi Robot Vacuum-Mop Essential | MJSTG1 | Wi-Fi 2.4 GHz | Mi Home, Mijia, Google Home, Amazon Alexa | https://www.mi.com/ru/mi-robot-vacuum-mop-essential/ | - |
+| ✅ Samsung SmartTV 55 4K | UE55NU7500U | Ethernet, Wi-Fi 2.4 GHz / 5 GHz, Bluetooth 5.0 | Samsung SmartThings | https://www.mvideo.ru/products/televizor-samsung-ue55nu7500u-10018553 | - |
