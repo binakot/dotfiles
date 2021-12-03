@@ -7,7 +7,7 @@
 * ✅ D-Link DGS-1024D
 * ✅ Wi-Fi Router Xiaomi Mi AIoT Router AX3600 (China firmware for signal power unlock)
 * ❌ Wi-Fi Router CPF903 3G/4G/LTE
-* ❌ Raspberry Pi 4 Model B, ICE-Tower CPU Cooling Fan V2.0
+* ✅ Raspberry Pi 4 Model B, ICE-Tower CPU Cooling Fan V2.0
 * ✅ Kllisre X79 M2, Intel Xeon E5-2620 v2, Deepcool Gamma Archer Pro, Samsung DDR3 1600 4GB x2, ASUS GeForce GT 710 2 GB, Kingston A400 SSD 240GB
 
 ## Gateways & Hubs
@@ -23,7 +23,7 @@
 
 | Name | ID | Protocols | Integrations | Link | Comments |
 | --- | --- | --- | --- | --- | --- |
-| ❌ Xiaomi N1 Smart Outdoor Camera (2) | CMSXJ25A | Ethernet, Wi-Fi 2.4 GHz | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/xiaobai-n1-smart-outdoor-camera/ | Wi-Fi Hotspot function |
+| ✅ Xiaomi N1 Smart Outdoor Camera (2) | CMSXJ25A | Ethernet, Wi-Fi 2.4 GHz | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/xiaobai-n1-smart-outdoor-camera/ | Wi-Fi Hotspot function |
 | ✅ Aqara Camera G2 | ZNSXJ12LM | Wi-Fi 2.4 GHz, ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-smart-camera-g2/ | MQTT unsupported |
 | ❌ Aqara Motion Sensor (3) | RTCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-dvizheniya-aqara/ | - |
 | ✅ Aqara Window Door Sensor (4) | MCCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-window-door-sensor/ | - |
