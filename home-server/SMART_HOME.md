@@ -14,14 +14,22 @@ $ docker-compose up -d
 Open port for access to home assistant web-ui and Apple HomeKit integration:
 
 ```bash
-# Hassio web-ui
+# Portainer UI
+$ sudo ufw allow 9000
+
+# Hassio web-UI
 $ sudo ufw allow 8123
+
 # Hassio HomeKit integration 
 $ sudo ufw allow 5353
 $ sudo ufw allow 21064
 ```
 
-Open `Home Assistant` at [http://home-server.lan:8123](http://home-server.lan:8123).
+Open [Home Assistant](https://www.home-assistant.io/) 
+at [http://home-server.lan:8123](http://home-server.lan:8123).
+
+Open [Pi-hole](https://docs.pi-hole.net/)
+at [http://home-server.lan/admin](http://home-server.lan/admin).
 
 Also there is available [Portainer](https://github.com/portainer/portainer) 
 at [http://home-server.lan:9000](http://home-server.lan:9000).
@@ -75,4 +83,10 @@ Grab all `MiHome` devices tokens:
 
 ```bash
 $ bash <(curl -L https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor/raw/master/run.sh)
+```
+
+Reset `Pi-hole` web-ui password:
+
+```bash
+$ docker exec -it pihole pihole -a -p
 ```
