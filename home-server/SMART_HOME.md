@@ -25,6 +25,13 @@ $ sudo ufw allow 5353
 $ sudo ufw allow 21064
 ```
 
+Disable `Network Name Resolution manager` service on a server to allow `Pi-hole` works correctly:
+
+```bash
+$ sudo systemctl disable systemd-resolved.service
+$ sudo systemctl stop systemd-resolved
+```
+
 Open [Home Assistant](https://www.home-assistant.io/) 
 at [http://home-server.lan:8123](http://home-server.lan:8123).
 
