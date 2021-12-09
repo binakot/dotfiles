@@ -21,9 +21,13 @@ services:
       - ./pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/
       - ./pihole/resolv.conf:/etc/resolv.conf:ro
     ports:
+      # DNS pihole-FTL
       - '53:53/tcp'
       - '53:53/udp'
+      # DHCP pihole-FTL
+      - '67:67/tcp'
       - '67:67/udp'
+      # HTTP lighttpd
       - '80:80/tcp'
     cap_add:
       - NET_ADMIN
