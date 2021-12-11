@@ -29,7 +29,7 @@
 | ✅ Aqara Window Door Sensor (4) | MCCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-window-door-sensor/ | - |
 | ✅ Aqara Water Sensor (3) | SJCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/xiaomi-datchik-protechek/ | - |
 | ✅ Honeywell Gas Leak Detector | JTQJ-BF-01 | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-gas-leak-detector/ | - |
-| ❌ Honeywell Fire Alarm Detector | JTYJ-GD-01LM/BW | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-fire-alarm-detector/ | - |
+| ✅ Honeywell Fire Alarm Detector | JTYJ-GD-01LM/BW | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-fire-alarm-detector/ | Battery CR123A |
 | ✅ Aqara Humidity & Temperature Sensor (4) | WSDCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-temperatury-vlazhnosti-i-davleniya-aqara/ | - |
 
 ## Sockets & Switchers
