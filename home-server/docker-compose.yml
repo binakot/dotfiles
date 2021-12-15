@@ -7,6 +7,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./homeassistant/config:/config
+      - ./homeassistant/resolv.conf:/etc/resolv.conf:ro
       - /etc/localtime:/etc/localtime:ro
     network_mode: host
 
