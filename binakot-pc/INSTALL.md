@@ -101,7 +101,7 @@ $ chsh -s $(which zsh)
 $ gnome-session-quit
 ```
 
-After reboot check that `ZSH` is default shell:
+After re-login check that `ZSH` is default shell:
 
 ```bash
 $ echo $SHELL
@@ -172,7 +172,7 @@ $ sudo docker run --rm hello-world
 ```bash
 $ sudo usermod -aG docker ${USER}
 $ su - ${USER}
-$ dcoker --version
+$ docker --version
 ```
 
 ```bash
@@ -199,16 +199,15 @@ $ sdk default java $VERSION # set a specific version as default for all terminal
 ```bash
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-$ nvm ls-remote             # list available versions of Node
-$ nvm install --lts         # install the latest LTS release of Node
-$ nvm current               # show the Node version for the current terminal
+$ nvm ls-remote | grep "Latest LTS" # list available versions of Node
+$ nvm install --lts                 # install the latest LTS release of Node
+$ nvm current                       # show the Node version for the current terminal
 ```
 
 * [Python](https://www.python.org/)
 
 ```bash
-$ sudo apt-get install \
-    libssl-dev libffi-dev \
+$ sudo apt-get install -u \
     python3-dev python3-pip python3-venv
 ```
 
