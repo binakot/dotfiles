@@ -47,16 +47,16 @@ binakot@binakot-pc:~$ neofetch
 
 ## Install OS
 
-[Pop!_OS](https://pop.system76.com/) 20.04 LTS
+[Pop!_OS](https://pop.system76.com/) 21.10
  
 ## Initial configuration
 
 * First update
 
 ```bash
-$ sudo apt-get update
-$ sudo apt-get dist-upgrade
-$ sudo apt autoremove
+$ sudo apt-get -y update
+$ sudo apt-get -y dist-upgrade
+$ sudo apt -y autoremove
 ```
 
 ---
@@ -66,27 +66,21 @@ $ sudo apt autoremove
 * Utils
 
 ```bash
-$ sudo apt-get install \
-    mc \
-    curl wget \
+$ sudo apt-get install -y \
+    build-essential apt-transport-https ca-certificates gnupg lsb-release \
+    git curl wget \
     htop iotop nmon \
-    lm-sensors hardinfo \
-    screenfetch neofetch \
-    cloc
-    
-$ sudo sensors-detect
+    mc \
+    screenfetch neofetch
+
+$ sudo apt-get install lm-sensors &&\
+    sudo sensors-detect &&\
+    sensors
 ```
 
 * [Docker](https://www.docker.com/)
 
 ```bash
-$ sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
-
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 $ echo \
