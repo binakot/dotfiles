@@ -7,6 +7,7 @@
 * ✅ D-Link DGS-1024D
 * ✅ Wi-Fi Router Xiaomi Mi AIoT Router AX3600 (China firmware for signal power unlock)
 * ❌ Wi-Fi Router CPF903 3G/4G/LTE
+* ❌ Mikrotik hAP ac lite tower (RB952Ui-5ac2nD-TC): 5x10/100Base-TX, Wi-Fi 2.4/5 GHz, USB, passive PoE 24V
 * ✅ Raspberry Pi 4 Model B, ICE-Tower CPU Cooling Fan V2.0
 * ✅ Kllisre X79 M2, Intel Xeon E5-2620 v2, Deepcool Gamma Archer Pro, Samsung DDR3 1600 4GB x2, ASUS GeForce GT 710 2 GB, Kingston A400 SSD 240GB
 
