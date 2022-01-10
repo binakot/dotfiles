@@ -48,15 +48,15 @@
 | Name | ID | Protocols | Integrations | Link | Comments |
 | --- | --- | --- | --- | --- | --- |
 | ❌ Philips ZhiRui Downlight (4) | 9290012799 | Wi-Fi 2.4 GHz | Mi Home, Mijia | https://xiaomi-smarthome.ru/tochechnyj-svetilnik-xiaomi-philips-zhirui/ | Parallel connection with zero line |
-| ❌ Yeelight LED Ceiling Light Pro | YLXD013 | Wi-Fi 2.4 GHz | Yeelight, Mijia, Яндекс.Алиса, Amazon Alexa, Google Home, Apple HomeKit, Samsung SmartThings | https://xiaomi-smarthome.ru/potolochnyj-svetilnik-yeelight-led-ceiling-lamp/ | - |
-| ❌ Yeelight LED Lightstrip 1S | YLDD05YL | Wi-Fi 2.4 GHz | Yeelight, Mijia, Яндекс.Алиса, Amazon Alexa, Google Home, Apple HomeKit, Samsung SmartThings | https://xiaomi-smarthome.ru/yeelight-led-lightstrip-plus/ | - |
-| ❌ Yeelight Remote Controller | YLYK01YL | Wi-Fi 2.4 GHz | Yeelight | https://www.ozon.ru/product/pult-upravleniya-dlya-svetilnika-xiaomi-yeelight-remote-control-white-ylyk01yl-203853587 | - |
+| ✅ Yeelight LED Ceiling Light Pro | YLXD013 | Wi-Fi 2.4 GHz | Yeelight, Mijia, Яндекс.Алиса, Amazon Alexa, Google Home, Apple HomeKit, Samsung SmartThings | https://xiaomi-smarthome.ru/potolochnyj-svetilnik-yeelight-led-ceiling-lamp/ | - |
+| ✅ Yeelight LED Lightstrip 1S | YLDD05YL | Wi-Fi 2.4 GHz | Yeelight, Mijia, Яндекс.Алиса, Amazon Alexa, Google Home, Apple HomeKit, Samsung SmartThings | https://xiaomi-smarthome.ru/yeelight-led-lightstrip-plus/ | - |
+| ✅ Yeelight Remote Controller | YLYK01YL | Wi-Fi 2.4 GHz | Yeelight | https://www.ozon.ru/product/pult-upravleniya-dlya-svetilnika-xiaomi-yeelight-remote-control-white-ylyk01yl-203853587 | - |
 
 ## Others
 
 | Name | ID | Protocols | Integrations | Link | Comments |
 | --- | --- | --- | --- | --- | --- |
-| ❌ Aqara Magic Cube | MFKZQ01LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-cube-controller/ | - |
+| ✅ Aqara Magic Cube | MFKZQ01LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-cube-controller/ | - |
 | ✅ Aqara Wireless Mini Switch (2) | WXKG11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-wireless-switch/ | - |
 | ✅ Xiaomi Smart Kettle Pro | BHR4198GL | Bluetooth 5.0 | Mi Home, Aqara Home, Mijia | https://market.yandex.ru/product--chainik-xiaomi-mi-smart-kettle-pro/833199025 | - |
 | ✅ Xiaomi Mi Robot Vacuum-Mop Essential | MJSTG1 | Wi-Fi 2.4 GHz | Mi Home, Mijia, Google Home, Amazon Alexa | https://www.mi.com/ru/mi-robot-vacuum-mop-essential/ | - |
