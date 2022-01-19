@@ -26,7 +26,7 @@
 | --- | --- | --- | --- | --- | --- |
 | ✅ Xiaomi N1 Smart Outdoor Camera (2) | CMSXJ25A | Ethernet, Wi-Fi 2.4 GHz | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/xiaobai-n1-smart-outdoor-camera/ | Wi-Fi Hotspot function |
 | ✅ Aqara Camera G2 | ZNSXJ12LM | Wi-Fi 2.4 GHz, ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/aqara-smart-camera-g2/ | MQTT unsupported |
-| ❌ Aqara Motion Sensor (3) | RTCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-dvizheniya-aqara/ | - |
+| ✅ Aqara Motion Sensor (3) | RTCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-dvizheniya-aqara/ | Battery CR2450 |
 | ✅ Aqara Window Door Sensor (4) | MCCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-window-door-sensor/ | - |
 | ✅ Aqara Water Sensor (3) | SJCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/xiaomi-datchik-protechek/ | - |
 | ✅ Honeywell Gas Leak Detector | JTQJ-BF-01 | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-gas-leak-detector/ | - |
