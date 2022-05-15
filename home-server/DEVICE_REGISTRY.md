@@ -35,13 +35,14 @@
 | ✅ Xiaomi Mijia HygroThermoGraph 2 (4) | LYWSD03MMC | Bluetooth 4.2 BLE | Mi Home, Mijia | https://xiaomi-smarthome.ru/datchik-temperatury-i-vlazhnosti-xiaomi-lywsd03mmc/ | - |
 
 ## Sockets & Switchers
-
+ 
 | Name | ID | Protocols | Integrations | Link | Comments |
 | --- | --- | --- | --- | --- | --- |
 | ✅ Aqara Wall Switch D1 Single Rocker (5) | QBKG04LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-wall-light-switch-one-button/ | No zero line |
 | ✅ Aqara Wall Switch D1 Double Rocker (4) | QBKG03LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-wall-light-switch-double-key/ | No zero line |
 | ✅ Aqara Wall Switch D1 Triple Rocker (1) | QBKG25LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/vyklyuchateli-xiaomi-aqara-smart-wall-switch-d1/ | No zero line |
 | ✅ Xiaomi Smart Plug (2) | ZNCZ04LM | ZigBee 3.0 | Mi Home, Mijia, Google Home, Amazon Alexa | https://market.yandex.ru/product--umnaia-rozetka-xiaomi-smart-plug-ZigBee-zncz04lm-mi-belyi/767548040 | - |
+| ✅Xiaomi Aqara Wireless Relay (2) | LLKZMK11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/rele-xiaomi-aqara/ | Dual channels |
 
 ## Lights
 
