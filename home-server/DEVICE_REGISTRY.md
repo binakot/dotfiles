@@ -31,8 +31,6 @@
 | ✅ Aqara Water Sensor (3) | SJCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/xiaomi-datchik-protechek/ | - |
 | ✅ Honeywell Gas Leak Detector | JTQJ-BF-01 | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-gas-leak-detector/ | - |
 | ✅ Honeywell Fire Alarm Detector | JTYJ-GD-01LM/BW | ZigBee 3.0 | Mi Home, Mijia | https://xiaomi-smarthome.ru/product/mijia-honeywell-fire-alarm-detector/ | Battery CR123A |
-| ✅ Aqara Humidity & Temperature Sensor (4) | WSDCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-temperatury-vlazhnosti-i-davleniya-aqara/ | - |
-| ✅ Xiaomi Mijia HygroThermoGraph 2 (4) | LYWSD03MMC | Bluetooth 4.2 BLE | Mi Home, Mijia | https://xiaomi-smarthome.ru/datchik-temperatury-i-vlazhnosti-xiaomi-lywsd03mmc/ | - |
 
 ## Sockets & Switchers
  
@@ -42,7 +40,7 @@
 | ✅ Aqara Wall Switch D1 Double Rocker (4) | QBKG03LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/product/aqara-wall-light-switch-double-key/ | No zero line |
 | ✅ Aqara Wall Switch D1 Triple Rocker (1) | QBKG25LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/vyklyuchateli-xiaomi-aqara-smart-wall-switch-d1/ | No zero line |
 | ✅ Xiaomi Smart Plug (2) | ZNCZ04LM | ZigBee 3.0 | Mi Home, Mijia, Google Home, Amazon Alexa | https://market.yandex.ru/product--umnaia-rozetka-xiaomi-smart-plug-ZigBee-zncz04lm-mi-belyi/767548040 | - |
-| ✅Xiaomi Aqara Wireless Relay (2) | LLKZMK11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/rele-xiaomi-aqara/ | Dual channels |
+| ✅Xiaomi Aqara Wireless Relay (3) | LLKZMK11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/rele-xiaomi-aqara/ | Dual channels |
 
 ## Lights
 
@@ -52,6 +50,15 @@
 | ✅ Yeelight LED Ceiling Light Pro | YLXD013 | Wi-Fi 2.4 GHz | Yeelight, Mijia, Яндекс.Алиса, Amazon Alexa, Google Home, Apple HomeKit, Samsung SmartThings | https://xiaomi-smarthome.ru/potolochnyj-svetilnik-yeelight-led-ceiling-lamp/ | - |
 | ✅ Yeelight LED Lightstrip 1S | YLDD05YL | Wi-Fi 2.4 GHz | Yeelight, Mijia, Яндекс.Алиса, Amazon Alexa, Google Home, Apple HomeKit, Samsung SmartThings | https://xiaomi-smarthome.ru/yeelight-led-lightstrip-plus/ | - |
 | ✅ Yeelight Remote Controller | YLYK01YL | Wi-Fi 2.4 GHz | Yeelight | https://www.ozon.ru/product/pult-upravleniya-dlya-svetilnika-xiaomi-yeelight-remote-control-white-ylyk01yl-203853587 | - |
+
+## Climate
+
+| Name | ID | Protocols | Integrations | Link | Comments |
+| --- | --- | --- | --- | --- | --- |
+| ✅ Aqara Humidity & Temperature Sensor (4) | WSDCGQ11LM | ZigBee 3.0 | Mi Home, Aqara Home, Mijia | https://xiaomi-smarthome.ru/datchik-temperatury-vlazhnosti-i-davleniya-aqara/ | - |
+| ✅ Xiaomi Mijia HygroThermoGraph 2 (4) | LYWSD03MMC | Bluetooth 4.2 BLE | Mi Home, Mijia | https://xiaomi-smarthome.ru/datchik-temperatury-i-vlazhnosti-xiaomi-lywsd03mmc/ | - |
+| ✅ Xiaomi Mi Air Purifier 2S | FJY4031GL | Wi-Fi 2.4 GHz | Mi Home, Mijia, Яндекс.Алиса | https://xiaomi-smarthome.ru/product/smartmi-air-purifier-2s/ | - |
+| ✅ Xiaomi Smartmi Air Humidifier 2 | CJXJSQ04ZM | Wi-Fi 2.4 GHz | Mi Home, Mijia, Яндекс.Алиса | https://xiaomi-smarthome.ru/uvlazhnitel-xiaomi-smartmi-air-humidifier-2-cjxjsq04zm/ | - |
 
 ## Others
 
