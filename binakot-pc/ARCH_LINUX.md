@@ -33,3 +33,64 @@ $ mkfs.ext4 /dev/sda2
 $ swapon /dev/sda1
 $ mount /dev/sda2 /mnt
 ```
+
+## Installation
+
+```bash
+# Install essential packages
+$ pacstrap -K /mnt base linux linux-firmware
+```
+
+## Configure the system
+
+```bash
+# Fstab
+$ genfstab -U /mnt >> /mnt/etc/fstab
+$ cat /mnt/etc/fstab
+
+# Chroot
+$ arch-chroot /mnt
+
+# Time zone
+$ ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+$ hwclock --systohc
+
+# Localization
+$ pacman -Sy nano
+$ nano /etc/locale.gen
+> en_US.UTF-8 UTF-8
+> ru_RU.UTF-8 UTF-8
+$ locale-gen
+$ echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+
+# Network configuration
+$ echo "archlinux" >> /etc/hostname
+
+# Root password
+$ passwd
+> toor
+
+# Boot loader
+$ pacman -Sy intel-ucode amd-ucode
+$ pacman -Sy grub
+$ grub-install --target=i386-pc /dev/sda
+$ grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## Reboot
+
+```bash
+$ exit
+$ umount -R /mnt
+$ reboot
+```
+
+## Post-installation
+
+```bash
+$ archlinux login: root
+> toor
+$ uname -a
+```
+
+https://wiki.archlinux.org/title/General_recommendations
