@@ -77,6 +77,12 @@ $ grub-install --target=i386-pc /dev/sda
 $ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+## Useful tools
+
+```bash
+$ pacman -Sy sudo dhcpcd
+```
+
 ## Reboot
 
 ```bash
@@ -94,3 +100,40 @@ $ uname -a
 ```
 
 https://wiki.archlinux.org/title/General_recommendations
+
+### Network
+
+```bash
+# Network
+$ systemctl start systemd-networkd.service
+$ systemctl enable systemd-networkd.service
+$ systemctl statuc systemd-networkd.service
+
+# DNS
+$ systemctl start systemd-resolved.service
+$ systemctl enable systemd-resolved.service
+$ systemctl statuc systemd-resolved.service
+
+# DHCP
+$ systemctl start dhcpcd.service
+$ systemctl enable dhcpcd.service
+$ systemctl statuc dhcpcd.service
+
+# Interface
+$ ip link
+$ ip link set enp0s3 up
+```
+
+### Users and groups
+
+```bash
+$ useradd -m binakot
+$ passwd binakot
+
+$ nano /etc/sudoers
+> %wheel ALL=(ALL) ALL
+$ usermod -aG wheel binakot
+
+$ exit
+$ archlinux login: binakot
+```
