@@ -142,15 +142,20 @@ $ archlinux login: binakot
 
 ```bash
 # Terminal emulator
-$ pacman -Syu alacritty
+$ sudo pacman -Syu alacritty
 
 # Xorg
-$ pacman -Syu xorg xorg-xinit xorg-drivers
+$ sudo pacman -Syu xorg xorg-xinit xorg-drivers
 
 # Tiling window manager
-$ pacman -Syu i3 ttf-dejavu
+$ sudo pacman -Syu i3 dmenu ttf-dejavu
 $ echo "exec i3" >> ~/.xinitrc
 ```
+
+Hotkeys:
+
+* `Alt + Enter` - new terminal
+* `Alt + D` - app launcher
 
 For autostart X at login edit `~/.bash_profile` and place the following lines:
 
@@ -163,6 +168,33 @@ fi
 Generate user directories like Downloads and Documents:
 
 ```bash
-$ pacman -Syu xdg-user-dirs
+$ sudo pacman -Syu xdg-user-dirs
 $ xdg-user-dirs-update
+```
+
+## VirtualBox Guest Additions (Optional)
+
+```bash
+$ sudo pacman -Syu virtualbox-guest-utils
+$ sudo systemctl enable vboxservice.service
+$ sudo reboot
+```
+
+Ref: https://youtu.be/hmku7eW8UFg
+
+## Applications
+
+### Arch User Repository Helper
+
+```bash
+$ sudo pacman -S --needed git base-devel
+$ git clone https://aur.archlinux.org/yay-bin.git
+$ cd yay-bin
+$ makepkg -si
+```
+
+### Apps
+
+```bash
+$ yay google-chrome
 ```
