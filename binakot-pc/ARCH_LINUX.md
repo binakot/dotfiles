@@ -175,6 +175,14 @@ $ sudo pacman -Syu xdg-user-dirs
 $ xdg-user-dirs-update
 ```
 
+### Sound
+
+```bash
+$ sudo pacman -Syu alsa-utils
+$ alsamixer
+> unmute by `m`
+```
+
 ---
 
 ## VirtualBox Guest Additions (Optional)
@@ -216,6 +224,7 @@ $ sudo pacman -Syu zsh
 
 $ chsh -l
 $ chsh -s /usr/bin/zsh
+$ cp ~/.bash_profile ~/.zprofile
 $ sudo reboot
 
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
