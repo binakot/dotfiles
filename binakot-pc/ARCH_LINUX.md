@@ -158,6 +158,7 @@ Hotkeys:
 
 * `Alt + Enter` - new terminal
 * `Alt + D` - app launcher
+* `Alt + Shift + Q` - close app
 
 For autostart X at login edit `~/.bash_profile` and place the following lines:
 
@@ -201,6 +202,61 @@ $ makepkg -si
 
 ### Apps
 
+#### Tools
+
+```bash
+$ sudo pacman -Syu htop neofetch
+```
+
+#### Dev
+
+```bash
+$ sudo pacman -Syu zsh
+> q
+
+$ chsh -l
+$ chsh -s /usr/bin/zsh
+$ sudo reboot
+
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+$ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+$ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+$ ~/.fzf/install
+
+$ nano ~/.zshrc
+plugins=(
+  git
+  zsh-completions
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  fzf
+)
+
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+$ nano ~/.zshrc
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+$ p10k configure
+yyyy3121111121n1y
+```
+
+```bash
+$ sudo pacman -Syu emacs
+$ emacs -nw
+```
+
+#### Web
+
 ```bash
 $ yay google-chrome
 ```
+
+---
+
+## Useful links
+
+* https://fernandocejas.com/blog/engineering/2020-12-28-install-arch-linux-full-disk-encryption
