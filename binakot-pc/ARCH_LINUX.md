@@ -202,13 +202,13 @@ $ makepkg -si
 
 ### Apps
 
-#### Tools
+#### Utils
 
 ```bash
 $ sudo pacman -Syu htop neofetch
 ```
 
-#### Dev
+#### Zsh
 
 ```bash
 $ sudo pacman -Syu zsh
@@ -240,9 +240,11 @@ $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:
 $ nano ~/.zshrc
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+$ yay ttf-meslo-nerd-font-powerlevel10k
 $ p10k configure
-yyyy3121111121n1y
 ```
+
+#### Emacs
 
 ```bash
 $ sudo pacman -Syu emacs
