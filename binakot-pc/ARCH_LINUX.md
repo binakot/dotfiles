@@ -7,18 +7,18 @@ https://wiki.archlinux.org/title/Installation_guide
 ## Pre-installation
 
 ```bash
-# Connect to the internet
+# Connect to the Internet
 $ ip link
 $ ping archlinux.org
 
 # Update the system clock
-$  timedatectl status
+$ timedatectl status
 
 # Partition the disks
 $ fdisk -l
 $ fdisk /dev/sda
 > o
-> n -> p -> 1 -> default -> +2G
+> n -> p -> 1 -> default -> +4G
 > n -> p -> 2 -> default -> default
 > t -> 1 -> swap
 > a -> 2
@@ -77,7 +77,7 @@ $ grub-install --target=i386-pc /dev/sda
 $ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Useful tools
+## Additional packages
 
 ```bash
 $ pacman -Sy sudo dhcpcd
@@ -90,6 +90,8 @@ $ exit
 $ umount -R /mnt
 $ reboot
 ```
+
+---
 
 ## Post-installation
 
@@ -172,6 +174,8 @@ $ sudo pacman -Syu xdg-user-dirs
 $ xdg-user-dirs-update
 ```
 
+---
+
 ## VirtualBox Guest Additions (Optional)
 
 ```bash
@@ -181,6 +185,8 @@ $ sudo reboot
 ```
 
 Ref: https://youtu.be/hmku7eW8UFg
+
+---
 
 ## Applications
 
