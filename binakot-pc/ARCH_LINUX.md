@@ -137,3 +137,32 @@ $ usermod -aG wheel binakot
 $ exit
 $ archlinux login: binakot
 ```
+
+### Graphical user interface
+
+```bash
+# Terminal emulator
+$ pacman -Syu alacritty
+
+# Xorg
+$ pacman -Syu xorg xorg-xinit xorg-drivers
+
+# Tiling window manager
+$ pacman -Syu i3 ttf-dejavu
+$ echo "exec i3" >> ~/.xinitrc
+```
+
+For autostart X at login edit `~/.bash_profile` and place the following lines:
+
+```bash
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  startx
+fi
+```
+
+Generate user directories like Downloads and Documents:
+
+```bash
+$ pacman -Syu xdg-user-dirs
+$ xdg-user-dirs-update
+```
