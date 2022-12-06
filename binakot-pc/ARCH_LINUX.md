@@ -237,6 +237,41 @@ $ sudo pacman -Syu telegram-desktop
 $ yay slack-desktop
 ```
 
+#### Zsh
+
+```bash
+$ sudo pacman -Syu zsh
+> q
+
+$ chsh -l
+$ chsh -s /usr/bin/zsh
+$ cp ~/.bash_profile ~/.zprofile
+$ sudo reboot
+
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+$ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+$ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+$ ~/.fzf/install
+
+$ nano ~/.zshrc
+plugins=(
+  git
+  zsh-completions
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  fzf
+)
+
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+$ nano ~/.zshrc
+ZSH_THEME="powerlevel10k/powerlevel10k"
+$ yay ttf-meslo-nerd-font-powerlevel10k
+$ p10k configure
+```
+
 ---
 
 ## Useful links
