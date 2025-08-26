@@ -255,8 +255,6 @@ $ sudo apt-get install -u \
 
 * [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
 
-* [Slack](https://slack.com/intl/en-ru/downloads/instructions/ubuntu)
-
 * [Telegram](https://desktop.telegram.org/)
 
 ---
